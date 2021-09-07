@@ -1,0 +1,24 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.container {
+	max-width: 1120px;
+	padding: 0 5px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}

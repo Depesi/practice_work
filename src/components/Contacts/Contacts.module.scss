@@ -1,0 +1,74 @@
+.contact__block {
+	margin: 0 20px;
+}
+
+.contacts__header {
+	font-weight: 500;
+	font-size: 24px;
+	color: #24bb96;
+}
+
+.contacts__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contacts__heading {
+	font-weight: 500;
+	font-size: 24px;
+	color: #000000;
+	margin-bottom: 15px;
+}
+
+.contacts__container {
+	background: #ffffff;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	padding: 30px;
+}
+
+.contacts__callCenter_list {
+	position: relative;
+}
+
+.callCenter__list_item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	padding-left: 15px;
+
+	&::before {
+		content: "";
+		width: 10px;
+		height: 10px;
+		background-color: #24bb96;
+		position: absolute;
+		left: -10px;
+		border-radius: 50%;
+	}
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.contacts__call {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+.call__items_row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.call__items_city {
+	color: #24bb96;
+}
