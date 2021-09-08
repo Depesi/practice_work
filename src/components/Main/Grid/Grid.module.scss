@@ -1,0 +1,23 @@
+.photos__grid {
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(2, 220px);
+	box-sizing: border-box;
+}
+
+.photos__grid_itemOverlay {
+	position: relative;
+	background-color: black;
+}
+
+.photos__grid_item {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	opacity: 0.6;
+	transition: 0.5s;
+
+	&:hover {
+		opacity: 1;
+	}
+}

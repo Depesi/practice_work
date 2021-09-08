@@ -1,3 +1,7 @@
+import { mainAPI } from "../api/api"
+
+const SET_SLIDER_PHOTO = "SET_SLIDER_PHOTO"
+
 let initialState = {
 	sliderPhotos: [
 		{
@@ -12,9 +16,30 @@ let initialState = {
 
 const photosReducer = (state = initialState, action) => {
 	switch (action.type) {
+		case SET_SLIDER_PHOTO:
+			return {
+				...state,
+				sliderPhotos: action.sliderPhotos
+			}
+
 		default:
 			return state
 	}
 }
+
+export const setSliderPhotos = (sliderPhotos) => {
+	return {
+		type: SET_SLIDER_PHOTO,
+		sliderPhotos
+	}
+}
+
+//thunk
+export const getSliderPhotos = () => async (dispatch) => {
+	let data = await mainAPI.getSliderPhotos()
+	dispatch(setSliderPhotos(data))
+}
+//thunk
+
 
 export default photosReducer;
