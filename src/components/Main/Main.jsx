@@ -3,17 +3,17 @@ import style from './Main.module.scss'
 import Slider from './Slider/Slider'
 
 const Main = (props) => {
+	let maxLength = 10
+
 	return (
 		<div>
-
 			<div className='container'>
-
-				<Slider />
+				<Slider sliderPhotos={props.sliderPhotos} maxLength={maxLength} />
 				<div className={style.grid__heading}> Галерея </div>
-				<Grid sliderPhotos={props.sliderPhotos} />
+				<Grid gridPhotos={props.sliderPhotos} maxLength={maxLength} />
 			</div>
-		</div>
 
+		</div>
 	)
 }
 

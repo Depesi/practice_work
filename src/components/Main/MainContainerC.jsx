@@ -11,9 +11,7 @@ class MainContainerC extends React.Component {
 
 	render() {
 		return (
-			<div className='container'>
-				<Main {...this.props} />
-			</div>
+			<Main {...this.props} />
 		)
 
 	}

@@ -8,16 +8,32 @@
 .photos__grid_itemOverlay {
 	position: relative;
 	background-color: black;
+	overflow: hidden;
+
+	&:hover {
+		.photos__grid_item {
+			opacity: 0.5;
+		}
+		.grid__item_title {
+			position: absolute;
+			transform: translate(0, 0);
+		}
+	}
 }
 
 .photos__grid_item {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	opacity: 0.6;
+	opacity: 1;
 	transition: 0.5s;
+}
 
-	&:hover {
-		opacity: 1;
-	}
+.grid__item_title {
+	transform: translate(0, -100%);
+	transition: all 0.5s;
+	text-align: center;
+	padding: 20px;
+	font-size: 20px;
+	color: #ffffff;
 }

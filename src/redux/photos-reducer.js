@@ -41,5 +41,4 @@ export const getSliderPhotos = () => async (dispatch) => {
 }
 //thunk
 
-
 export default photosReducer;

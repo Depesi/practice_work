@@ -9,11 +9,6 @@ import MainContainerC from './components/Main/MainContainerC';
 
 class App extends React.Component {
 
-	componentDidMount() {
-		let data = mainAPI.getSliderPhotos()
-		console.log(data);
-	}
-
 	render() {
 		return (
 			<div className="wrapper">
@@ -25,7 +20,7 @@ class App extends React.Component {
 						<Route path='/contacts' render={() => <Contacts />} />
 					</Switch>
 				</div>
-			</div >
+			</div>
 		);
 	}
 }
