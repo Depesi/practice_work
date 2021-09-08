@@ -3,6 +3,10 @@
 	grid-template-columns: repeat(5, 20%);
 	grid-template-rows: repeat(2, 220px);
 	box-sizing: border-box;
+
+	@media (max-width: 900px) {
+		grid-template-rows: repeat(2, 150px);
+	}
 }
 
 .photos__grid_itemOverlay {

@@ -3,7 +3,6 @@ import style from './Grid.module.scss'
 const Grid = (props) => {
 
 	let gridPhotos = props.gridPhotos.filter(img => img.id <= props.maxLength)
-	console.log(gridPhotos);
 
 	return (
 		<div className={style.photos__grid}>

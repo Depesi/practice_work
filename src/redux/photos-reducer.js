@@ -15,6 +15,7 @@ let initialState = {
 }
 
 const photosReducer = (state = initialState, action) => {
+
 	switch (action.type) {
 		case SET_SLIDER_PHOTO:
 			return {

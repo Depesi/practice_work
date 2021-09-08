@@ -43,8 +43,8 @@ const Contacts = () => {
 				</div>
 			</div>
 
-			<div className={style.contacts__photo}>
-				<img src={contactsPhoto} />
+			<div >
+				<img className={style.contacts__photo} src={contactsPhoto} />
 			</div>
 		</div>
 	)
