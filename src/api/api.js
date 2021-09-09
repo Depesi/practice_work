@@ -1,8 +1,13 @@
 import * as axios from "axios"
 
 const instance = axios.create({
-	baseURL: 'http://my-json-server.typicode.com/Depesi/photosjson/'
-	//	baseURL: 'http://my-json-server.typicode.com/Depesi/photosjson/' Работающий http server
+	// baseURL: 'http://my-json-server.typicode.com/Depesi/photosjson/' //Работающий http server
+	// headers: {
+	// 	'Access-Control-Allow-Credentials': true,
+	// 	'Access-Control-Allow-Origin': true
+	// },
+
+	baseURL: 'https://api.npoint.io/8993ef4d6fdc80c36060'
 })
 
 export const appAPI = {
@@ -12,7 +17,6 @@ export const appAPI = {
 	setThemeMode(darkMode) {
 		return instance.put(`App`, { darkMode }).then(response => response.data)
 	}
-
 }
 
 export const mainAPI = {
