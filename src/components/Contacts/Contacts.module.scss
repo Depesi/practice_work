@@ -1,5 +1,8 @@
 .contact__block {
 	margin: 0 20px;
+	@media (max-width: 1000px) {
+		margin-bottom: 15px;
+	}
 }
 
 .contacts__header {
@@ -11,6 +14,9 @@
 .contacts__row {
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 1000px) {
+		flex-direction: column;
+	}
 }
 
 .contacts__heading {
