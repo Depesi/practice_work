@@ -12,7 +12,6 @@ const Main = (props) => {
 				<div className={style.grid__heading}> Галерея </div>
 				<Grid gridPhotos={props.sliderPhotos} maxLength={maxLength} />
 			</div>
-
 		</div>
 	)
 }

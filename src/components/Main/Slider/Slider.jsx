@@ -2,7 +2,6 @@ import { useState } from 'react'
 import style from './Slider.module.scss'
 
 const Slider = ({ sliderPhotos, ...props }) => {
-
 	let sortPhotos = sliderPhotos.filter(i => i.id <= props.maxLength)
 
 	const [currentImage, setCurrentImage] = useState(1);

@@ -22,8 +22,8 @@ const Header = (props) => {
 							<div className={style.toggleContainer}
 								onClick={theme.darkMode ? () => props.setThemeMode(false) : () => props.setThemeMode(true)}>
 								<div className={style.toggleWrapper}>
-									<input type={'checkbox'} className={style.dn} id="dn" checked={theme.darkMode ? true : false} />
-									<label for="dn" className={style.toggle}>
+									<input type={'checkbox'} className={style.dn} id={"dn"} checked={theme.darkMode ? true : false} />
+									<label htmlFor={"dn"} className={style.toggle}>
 										<span className={style.toggle__handler}>
 											<span className={style.crater + ' ' + style.crater1}></span>
 											<span className={style.crater + ' ' + style.crater2}></span>
@@ -38,16 +38,11 @@ const Header = (props) => {
 									</label>
 								</div>
 							</div>
-							{/* {theme.darkMode
-								? <img src={darkTheme} className={style.swap__theme_icon}
-									onClick={() => { props.setThemeMode(false) }} />
-								: <img src={lightTheme} className={style.swap__theme_icon}
-									onClick={() => { props.setThemeMode(true) }} />} */}
 						</ul>
 					</nav>
 				</div>
 			</div>
-		</header >
+		</header>
 	)
 }
 
