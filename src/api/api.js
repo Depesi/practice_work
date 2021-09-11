@@ -1,7 +1,7 @@
 import * as axios from "axios"
 
 const instance = axios.create({
-	// baseURL: 'http://my-json-server.typicode.com/Depesi/photosjson/' //Работающий http server
+	//baseURL: 'http://my-json-server.typicode.com/Depesi/photosjson/' //Работающий http server
 	// headers: {
 	// 	'Access-Control-Allow-Credentials': true,
 	// 	'Access-Control-Allow-Origin': true
