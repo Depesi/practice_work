@@ -15,7 +15,6 @@ const Slider = ({ sliderPhotos, ...props }) => {
 
 			{sortPhotos
 				.map((img) => {
-
 					if (img.id === currentImage) {
 						return <div key={img.id} className={style.slider__item}>
 							<img className={style.slider__active} src={img.url}></img>
@@ -26,7 +25,6 @@ const Slider = ({ sliderPhotos, ...props }) => {
 				? <div className={style.slider__container_arrowsDisabled}>&#9654;</div>
 				: <div className={style.slider__container_arrows} onClick={() => setCurrentImage(currentImage + 1)}>&#9654;</div>
 			}
-
 		</div>
 	)
 }

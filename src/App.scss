@@ -61,3 +61,61 @@ a {
 }
 
 // !Preloader
+
+//scrollBar
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+	background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #24bb96;
+	background-image: -webkit-gradient(
+		linear,
+		0 0,
+		0 100%,
+		color-stop(0.5, rgba(255, 255, 255, 0.25)),
+		color-stop(0.5, transparent),
+		to(transparent)
+	);
+}
+
+//!scrollBar
+
+//Оболочка для ошибки
+.content__container {
+	position: relative;
+}
+.error__container {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	background-color: red;
+	animation: open-modal-error 1s ease;
+	padding: 10px;
+	border-radius: 10px;
+}
+.error__container_close {
+	display: flex;
+	justify-content: flex-end;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+.error__container_text {
+	color: #fff;
+}
+
+@keyframes open-modal-error {
+	from {
+		transform: translate(0, 200%);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+//!Оболочка для ошибки

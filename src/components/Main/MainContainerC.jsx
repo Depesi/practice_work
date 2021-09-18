@@ -13,7 +13,6 @@ class MainContainerC extends React.Component {
 		return (
 			<Main {...this.props} />
 		)
-
 	}
 }
 

@@ -2,10 +2,13 @@ import { appAPI } from "../api/api"
 
 const SET_MODE = 'SET_MODE'
 const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS'
+const SET_ERROR = 'SET_ERROR'
 
 let initialState = {
 	darkMode: false,
-	initializeApp: false
+	initializeApp: false,
+	appError: false
+
 }
 
 const appReducer = (state = initialState, action) => {
@@ -17,6 +20,10 @@ const appReducer = (state = initialState, action) => {
 			}
 		case INITIALIZED_SUCCESS:
 			return { ...state, initializeApp: true }
+
+		case SET_ERROR:
+			debugger
+			return { ...state, appError: action.appError }
 
 		default:
 			return state
@@ -36,6 +43,13 @@ export const initializedSuccess = () => {
 	}
 }
 
+export const setError = (appError) => {
+	return {
+		type: SET_ERROR,
+		appError
+	}
+}
+
 //thunk
 
 export const getThemeMode = () => async (dispatch) => {
@@ -46,7 +60,13 @@ export const getThemeMode = () => async (dispatch) => {
 
 export const setThemeMode = (darkMode) => async (dispatch) => {
 	let data = await appAPI.setThemeMode(darkMode)
-	dispatch(setTheme(data))
+	if (data.status >= 300) {
+		dispatch(setError(true))
+	}
+	else {
+		dispatch(setTheme(data.data))
+	}
+
 }
 //thunk
 

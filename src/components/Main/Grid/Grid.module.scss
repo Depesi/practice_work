@@ -1,114 +1,118 @@
-.switch__photos_style {
-	margin-bottom: 15px;
-}
+// .switch__photos_style {
+// 	margin-bottom: 15px;
+// }
 
-.photos__grid {
-	display: grid;
-	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: repeat(2, 220px);
-	box-sizing: border-box;
+// .photos__grid {
+// 	display: grid;
+// 	grid-template-columns: repeat(5, 20%);
+// 	grid-template-rows: repeat(2, 220px);
+// 	box-sizing: border-box;
 
-	@media (max-width: 900px) {
-		grid-template-rows: repeat(2, 150px);
-	}
-}
+// 	@media (max-width: 900px) {
+// 		grid-template-rows: repeat(2, 150px);
+// 	}
+// }
 
-.photos__grid_itemOverlay {
-	position: relative;
-	background-color: black;
-	overflow: hidden;
+// .photos__grid_itemOverlay {
+// 	position: relative;
+// 	background-color: black;
+// 	overflow: hidden;
 
-	&:hover {
-		.photos__grid_item {
-			opacity: 0.5;
-		}
-		.grid__item_title {
-			position: absolute;
-			transform: translate(0, 0);
-		}
-	}
-}
+// 	&:hover {
+// 		.photos__grid_item {
+// 			opacity: 0.5;
+// 		}
+// 		.grid__item_title {
+// 			position: absolute;
+// 			transform: translate(0, 0);
+// 		}
+// 	}
+// }
 
-.photos__grid_item {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	opacity: 1;
-	transition: 0.5s;
-}
+// .photos__grid_item {
+// 	height: 100%;
+// 	width: 100%;
+// 	position: absolute;
+// 	opacity: 1;
+// 	transition: 0.5s;
+// }
 
-.grid__item_title {
-	transform: translate(0, -100%);
-	transition: all 0.5s;
-	text-align: center;
-	padding: 20px;
-	font-size: 20px;
-	color: #ffffff;
-}
+// .grid__item_title {
+// 	transform: translate(0, -100%);
+// 	transition: all 0.5s;
+// 	text-align: center;
+// 	padding: 20px;
+// 	font-size: 20px;
+// 	color: #ffffff;
+// }
 
-.photos__table {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
+// .photos__table {
+// 	display: flex;
+// 	flex-wrap: wrap;
+// }
 
-.photos__table_container {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 21%;
-	background-color: #ffffff;
-	border-radius: 16px;
-	margin-bottom: 25px;
-	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
-}
+// .photos__table_container {
+// 	display: flex;
+// 	flex-direction: column;
+// 	flex-basis: 23%;
+// 	background-color: #ffffff;
+// 	border-radius: 16px;
+// 	margin-bottom: 25px;
+// 	margin-right: 28px;
+// 	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
 
-.photos__table_photo {
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	margin-bottom: 10px;
-	filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
-}
+// 	&:nth-child(4n) {
+// 		margin-right: 0;
+// 	}
+// }
 
-.table__item_description {
-	padding: 0 10px;
-	padding-bottom: 10px;
-}
+// .photos__table_photo {
+// 	border-top-left-radius: 16px;
+// 	border-top-right-radius: 16px;
+// 	margin-bottom: 10px;
+// 	filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
+// }
 
-.search__input {
-	font-size: 16px;
-	width: 300px;
-	padding: 10px 8px;
-	margin-bottom: 20px;
-	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-	outline: none;
-	border: none;
-}
+// .table__item_description {
+// 	padding: 0 10px;
+// 	padding-bottom: 10px;
+// }
 
-.above__table {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.above__grid {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
+// .search__input {
+// 	font-size: 16px;
+// 	width: 300px;
+// 	padding: 10px 8px;
+// 	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+// 	outline: none;
+// 	border: none;
+// }
 
-.switch__photos_style {
-	display: inline-block;
-	padding: 10px 12px;
-	border: 2px solid #24bb96;
-	background-color: #24bb96;
-	box-sizing: border-box;
-	border-radius: 30px;
-	transition: all 0.3s;
-	color: #ffffff;
-	font-size: 16px;
-	cursor: pointer;
+// .above__table {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// }
 
-	&:hover {
-		color: #24bb96;
-		background-color: #ffffff;
-	}
-}
+// .above__grid {
+// 	display: flex;
+// 	justify-content: flex-end;
+// 	align-items: center;
+// }
+
+// .switch__photos_style {
+// 	display: inline-block;
+// 	padding: 10px 12px;
+// 	border: 2px solid #24bb96;
+// 	background-color: #24bb96;
+// 	box-sizing: border-box;
+// 	border-radius: 30px;
+// 	transition: all 0.3s;
+// 	color: #ffffff;
+// 	font-size: 16px;
+// 	cursor: pointer;
+
+// 	&:hover {
+// 		color: #24bb96;
+// 		background-color: #ffffff;
+// 	}
+// }
