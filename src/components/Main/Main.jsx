@@ -1,9 +1,16 @@
+import { useEffect } from 'react'
 import Grid from './Grid/Grid'
 import style from './Main.module.scss'
 import Slider from './Slider/Slider'
+import { setSliderPhotos, getSliderPhotos } from './../../redux/photos-reducer'
+import { connect } from 'react-redux'
 
 const Main = (props) => {
-	let maxLength = 10
+	useEffect(() => {
+		props.getSliderPhotos();
+	}, [])
+
+	const maxLength = 10
 
 	return (
 		<div>
@@ -16,4 +23,9 @@ const Main = (props) => {
 	)
 }
 
-export default Main
+const mapStateToProps = (state) => {
+	return {
+		sliderPhotos: state.photos.sliderPhotos
+	}
+}
+export default connect(mapStateToProps, { setSliderPhotos, getSliderPhotos })(Main)

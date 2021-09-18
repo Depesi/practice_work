@@ -1,11 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import style from './Header.module.scss'
-import lightTheme from '../../img/light__theme.svg'
-import darkTheme from '../../img/dark__theme.svg'
-
+import { setThemeMode, setTheme } from './../../redux/app-reducer'
+import { connect } from 'react-redux';
 
 const Header = (props) => {
-	let theme = props.darkMode;
+	const theme = props.darkMode;
 
 	return (
 		<header className={theme.darkMode ? style.headerDark : style.header}>
@@ -46,4 +45,10 @@ const Header = (props) => {
 	)
 }
 
-export default Header
+const mapStateToProps = (state) => {
+	return {
+		darkMode: state.app.darkMode
+	}
+}
+
+export default connect(mapStateToProps, { setThemeMode, setTheme })(Header)
