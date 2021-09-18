@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/practice_work/static/css/main.5ba011e9.chunk.css",
-    "main.js": "/practice_work/static/js/main.fb3ed431.chunk.js",
-    "main.js.map": "/practice_work/static/js/main.fb3ed431.chunk.js.map",
-    "runtime-main.js": "/practice_work/static/js/runtime-main.8dca3b5d.js",
-    "runtime-main.js.map": "/practice_work/static/js/runtime-main.8dca3b5d.js.map",
-    "static/js/2.a434324a.chunk.js": "/practice_work/static/js/2.a434324a.chunk.js",
-    "static/js/2.a434324a.chunk.js.map": "/practice_work/static/js/2.a434324a.chunk.js.map",
-    "static/js/3.5ac2df47.chunk.js": "/practice_work/static/js/3.5ac2df47.chunk.js",
-    "static/js/3.5ac2df47.chunk.js.map": "/practice_work/static/js/3.5ac2df47.chunk.js.map",
+    "main.css": "/practice_work/static/css/main.4964ecc5.chunk.css",
+    "main.js": "/practice_work/static/js/main.6be44a5c.chunk.js",
+    "main.js.map": "/practice_work/static/js/main.6be44a5c.chunk.js.map",
+    "runtime-main.js": "/practice_work/static/js/runtime-main.e23e991b.js",
+    "runtime-main.js.map": "/practice_work/static/js/runtime-main.e23e991b.js.map",
+    "static/js/2.9bc5d70e.chunk.js": "/practice_work/static/js/2.9bc5d70e.chunk.js",
+    "static/js/2.9bc5d70e.chunk.js.map": "/practice_work/static/js/2.9bc5d70e.chunk.js.map",
+    "static/js/3.1d21b9a8.chunk.js": "/practice_work/static/js/3.1d21b9a8.chunk.js",
+    "static/js/3.1d21b9a8.chunk.js.map": "/practice_work/static/js/3.1d21b9a8.chunk.js.map",
     "index.html": "/practice_work/index.html",
-    "static/css/main.5ba011e9.chunk.css.map": "/practice_work/static/css/main.5ba011e9.chunk.css.map",
-    "static/js/2.a434324a.chunk.js.LICENSE.txt": "/practice_work/static/js/2.a434324a.chunk.js.LICENSE.txt",
+    "static/css/main.4964ecc5.chunk.css.map": "/practice_work/static/css/main.4964ecc5.chunk.css.map",
+    "static/js/2.9bc5d70e.chunk.js.LICENSE.txt": "/practice_work/static/js/2.9bc5d70e.chunk.js.LICENSE.txt",
+    "static/media/Close_icon.7e285347.svg": "/practice_work/static/media/Close_icon.7e285347.svg",
     "static/media/contacts__bigPhoto.629b9c1e.svg": "/practice_work/static/media/contacts__bigPhoto.629b9c1e.svg",
     "static/media/dark__theme.142bc17f.svg": "/practice_work/static/media/dark__theme.142bc17f.svg",
     "static/media/light__theme.881ea140.svg": "/practice_work/static/media/light__theme.881ea140.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8dca3b5d.js",
-    "static/js/2.a434324a.chunk.js",
-    "static/css/main.5ba011e9.chunk.css",
-    "static/js/main.fb3ed431.chunk.js"
+    "static/js/runtime-main.e23e991b.js",
+    "static/js/2.9bc5d70e.chunk.js",
+    "static/css/main.4964ecc5.chunk.css",
+    "static/js/main.6be44a5c.chunk.js"
   ]
 }
