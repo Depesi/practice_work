@@ -1,5 +1,4 @@
-import { createSelector } from "reselect";
-
-export const getPhotosForSlider = (state) => {
-	return state.photos.sliderPhotos
-}
+// eslint-disable-next-line import/prefer-default-export
+export const getPhotosForSlider = state => {
+  return state.photos.sliderPhotos;
+};
