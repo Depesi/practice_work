@@ -8,7 +8,6 @@ let initialState = {
 	darkMode: false,
 	initializeApp: false,
 	appError: false
-
 }
 
 const appReducer = (state = initialState, action) => {
@@ -22,7 +21,6 @@ const appReducer = (state = initialState, action) => {
 			return { ...state, initializeApp: true }
 
 		case SET_ERROR:
-			debugger
 			return { ...state, appError: action.appError }
 
 		default:

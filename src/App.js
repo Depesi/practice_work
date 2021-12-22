@@ -8,6 +8,7 @@ import './App.scss';
 import Contacts from './components/Contacts/Contacts';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
+import { getAppError, getDarkMode, getInitializeApp } from './redux/app-selectors';
 
 const App = (props) => {
 	useEffect(() => {
@@ -50,9 +51,9 @@ const App = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		darkMode: state.app.darkMode,
-		initializeApp: state.app.initializeApp,
-		appError: state.app.appError
+		darkMode: getDarkMode(state),
+		initializeApp: getInitializeApp(state),
+		appError: getAppError(state)
 	}
 }
 

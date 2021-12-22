@@ -4,6 +4,7 @@ import style from './Main.module.scss'
 import Slider from './Slider/Slider'
 import { setSliderPhotos, getSliderPhotos } from './../../redux/photos-reducer'
 import { connect } from 'react-redux'
+import { getPhotosForSlider } from '../../redux/photos-selectors'
 
 const Main = (props) => {
 	useEffect(() => {
@@ -25,7 +26,7 @@ const Main = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		sliderPhotos: state.photos.sliderPhotos
+		sliderPhotos: getPhotosForSlider(state)
 	}
 }
 export default connect(mapStateToProps, { setSliderPhotos, getSliderPhotos })(Main)
