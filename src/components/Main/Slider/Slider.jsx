@@ -35,19 +35,6 @@ const Slider = ({ sliderPhotos, ...props }) => {
             </div>
           );
         })}
-      {/* {sortPhotos.map(img => {
-        if (img.id === currentImage) {
-          return (
-            <div key={img.id} className={style.slider__item}>
-              <img
-                className={style.slider__active}
-                src={img.url}
-                alt={img.title}
-              ></img>
-            </div>
-          );
-        }
-      })} */}
       {currentImage >= props.maxLength ? (
         <div className={style.slider__container_arrowsDisabled}>&#9654;</div>
       ) : (

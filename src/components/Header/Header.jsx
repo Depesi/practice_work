@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -35,13 +36,13 @@ const Header = props => {
                 }
               >
                 <div className={style.toggleWrapper}>
+                  <input
+                    type="checkbox"
+                    className={style.dn}
+                    id="dn"
+                    checked={!!theme.darkMode}
+                  />
                   <label htmlFor="dn" className={style.toggle}>
-                    <input
-                      type="checkbox"
-                      className={style.dn}
-                      id="dn"
-                      checked={!!theme.darkMode}
-                    />
                     <span className={style.toggle__handler}>
                       <span
                         className={`${style.crater} ${style.crater1}`}

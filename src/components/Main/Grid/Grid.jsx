@@ -1,42 +1,9 @@
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import PhotosGridDisplay from './PhotosGridDisplay';
-import PhotosTableDisplay from './PhotosTableDisplay';
-
-const AboveTable = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-`;
-
-const SwitchPhotosStyle = styled.button`
-  display: inline-block;
-  padding: 10px 12px;
-  border: 2px solid #24bb96;
-  background-color: #24bb96;
-  box-sizing: border-box;
-  border-radius: 30px;
-  transition: all 0.3s;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-
-  &:hover {
-    color: #24bb96;
-    background-color: #ffffff;
-  }
-`;
-
-const SearchInput = styled.input`
-  font-size: 16px;
-  width: 300px;
-  padding: 10px 8px;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-  outline: none;
-  border: none;
-`;
+import PhotosGridDisplay from './PhotosGridDisplay/PhotosGridDisplay';
+import PhotosTableDisplay from './PhotosTableDisplay/PhotosTableDisplay';
+import style from './Grid.module.scss'
 
 const Grid = props => {
   const [tableMode, setTableMode] = useState(false);
@@ -49,9 +16,10 @@ const Grid = props => {
 
   return (
     <>
-      <AboveTable>
+      <div className={style.above__table}>
         <form>
-          <SearchInput
+          <input 
+		    className={style.search__input}
             type="text"
             placeholder="Search the photo"
             onChange={e => setValue(e.target.value)}
@@ -59,15 +27,13 @@ const Grid = props => {
         </form>
 
         {!tableMode ? (
-          <SwitchPhotosStyle onClick={() => setTableMode(true)}>
-            Table mode
-          </SwitchPhotosStyle>
+			<button type="button" onClick={() => setTableMode(true)} className={style.switch__photos_style}> Table Mode </button>
+  
         ) : (
-          <SwitchPhotosStyle onClick={() => setTableMode(false)}>
-            Grid mode
-          </SwitchPhotosStyle>
+			<button type="button" onClick={() => setTableMode(false)} className={style.switch__photos_style}> Grid Mode </button>
+   
         )}
-      </AboveTable>
+      </div>
 
       {!tableMode ? (
         <PhotosGridDisplay filteredPhoto={filteredPhoto}></PhotosGridDisplay>
