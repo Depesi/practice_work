@@ -9,13 +9,13 @@ import { getThemeMode, setError } from './redux/app-reducer';
 import closeIcon from './img/Close_icon.svg';
 import './App.scss';
 import Contacts from './components/Contacts/Contacts';
-import Main from './components/Main/Main';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/Container/HeaderContainer';
 import {
   getAppError,
   getDarkMode,
   getInitializeApp,
 } from './redux/app-selectors';
+import MainContainer from './components/Main/Container/MainContainer';
 
 const App = props => {
   useEffect(() => {
@@ -33,7 +33,7 @@ const App = props => {
   return (
     <>
       <div className={props.darkMode.darkMode ? 'dark-wrapper' : 'wrapper'}>
-        <Header darkMode={props.darkMode} />
+        <HeaderContainer darkMode={props.darkMode} />
         <div className="content__container">
           <Switch>
             <Route path="/" exact>
@@ -42,7 +42,7 @@ const App = props => {
             <Route path="/practice_work" exact>
               <Redirect to="/main" />
             </Route>
-            <Route path="/main" render={() => <Main />} />
+            <Route path="/main" render={() => <MainContainer />} />
             <Route path="/contacts" render={() => <Contacts />} />
           </Switch>
 

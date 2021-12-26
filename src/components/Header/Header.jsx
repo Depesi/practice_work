@@ -2,11 +2,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import style from './Header.module.scss';
-import { setThemeMode, setTheme } from '../../redux/app-reducer';
-import { getDarkMode } from '../../redux/app-selectors';
 
 const Header = props => {
   const theme = props.darkMode;
@@ -76,10 +73,4 @@ Header.propTypes = {
   setThemeMode: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => {
-  return {
-    darkMode: getDarkMode(state),
-  };
-};
-
-export default connect(mapStateToProps, { setThemeMode, setTheme })(Header);
+export default Header;
