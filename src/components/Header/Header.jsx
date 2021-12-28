@@ -68,9 +68,14 @@ const Header = props => {
   );
 };
 
+Header.defaultProps = {
+  darkMode: false,
+  setThemeMode: () => {},
+};
+
 Header.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  setThemeMode: PropTypes.func.isRequired,
+  darkMode: PropTypes.bool,
+  setThemeMode: PropTypes.func,
 };
 
 export default Header;
