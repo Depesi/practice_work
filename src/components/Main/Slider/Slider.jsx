@@ -1,59 +1,60 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import BtnSlider from './BtnSlider';
 import style from './Slider.module.scss';
 
-const Slider = ({ sliderPhotos, ...props }) => {
-  const sortPhotos = sliderPhotos.filter(i => i.id <= props.maxLength);
+const Slider = ({ sliderPhotos, maxLength }) => {
+  const sortPhotos = sliderPhotos.filter(i => i.id <= maxLength);
 
   const [currentImage, setCurrentImage] = useState(1);
 
+  const nextSlide = () => {
+    if (currentImage !== sortPhotos.length) {
+      setCurrentImage(currentImage + 1);
+    } else if (currentImage === sortPhotos.length) {
+      setCurrentImage(1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentImage !== 1) {
+      setCurrentImage(currentImage - 1);
+    } else if (currentImage === 1) {
+      setCurrentImage(sortPhotos.length);
+    }
+  };
+
   return (
-    <div className={style.slider__container}>
-      {currentImage <= 1 ? (
-        <div className={style.slider__container_arrowsDisabled}>&#9664;</div>
-      ) : (
-        <div
-          role="button"
-          tabIndex={0}
-          className={style.slider__container_arrows}
-          onClick={() => setCurrentImage(currentImage - 1)}
-        >
-          &#9664;
-        </div>
-      )}
-      {sortPhotos
-        .filter(img => img.id === currentImage)
-        .map(img => {
-          return (
-            <div key={img.id} className={style.slider__item}>
-              <img
-                className={style.slider__active}
-                src={img.url}
-                alt={img.title}
-              ></img>
-            </div>
-          );
-        })}
-      {currentImage >= props.maxLength ? (
-        <div className={style.slider__container_arrowsDisabled}>&#9654;</div>
-      ) : (
-        <div
-          role="button"
-          tabIndex={0}
-          className={style.slider__container_arrows}
-          onClick={() => setCurrentImage(currentImage + 1)}
-        >
-          &#9654;
-        </div>
-      )}
+    <div className={style.container__slider}>
+      {sortPhotos.map((img, index) => {
+        return (
+          <div
+            key={img.id}
+            className={
+              currentImage === index + 1
+                ? `${style.slide} ${style.active__anim}`
+                : `${style.slide}`
+            }
+          >
+            <img src={img.url} alt={img.title}></img>
+          </div>
+        );
+      })}
+      <BtnSlider moveSlide={nextSlide} direction="next" />
+      <BtnSlider moveSlide={prevSlide} direction="prev" />
     </div>
   );
 };
 
+Slider.defaultProps = {
+  sliderPhotos: [],
+  maxLength: 10,
+};
 Slider.propTypes = {
-  sliderPhotos: PropTypes.array.isRequired,
-  maxLength: PropTypes.number.isRequired,
+  sliderPhotos: PropTypes.array,
+  maxLength: PropTypes.number,
 };
 
 export default Slider;
