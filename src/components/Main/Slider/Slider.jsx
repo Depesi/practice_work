@@ -7,7 +7,6 @@ import style from './Slider.module.scss';
 
 const Slider = ({ sliderPhotos, maxLength }) => {
   const sortPhotos = sliderPhotos.filter(i => i.id <= maxLength);
-
   const [currentImage, setCurrentImage] = useState(1);
 
   const nextSlide = () => {

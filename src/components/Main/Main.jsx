@@ -14,6 +14,7 @@ const Main = ({ sliderPhotos, getSliderPhotos }) => {
   return (
     <div>
       <div className="container">
+        <div className={style.slider__heading}> Найближчі події</div>
         <Slider sliderPhotos={sliderPhotos} maxLength={maxLength} />
         <div className={style.grid__heading}> Галерея </div>
         <Grid gridPhotos={sliderPhotos} maxLength={maxLength} />

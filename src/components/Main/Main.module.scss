@@ -1,10 +1,18 @@
-@import '../../assets/styles/variables.scss';
+@import "../../assets/styles/variables.scss";
 
 .grid__heading {
+  font-weight: 500;
+  font-size: 24px;
+  color: $white;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background-color: $mainColor;
+}
+.slider__heading {
 	font-weight: 500;
 	font-size: 24px;
-	color: $white;
-	padding: 15px 20px;
-	margin-bottom: 20px;
-	background-color: $mainColor;
+	line-height: 29px;
+	color: $mainColor;
+	margin-bottom: 15px;
+	text-shadow: rgba(0,0,0, 0.25) 1px 0 20px;
 }

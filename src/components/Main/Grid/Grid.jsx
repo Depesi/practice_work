@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -24,15 +25,15 @@ const Grid = props => {
             placeholder="Search the photo"
             onChange={e => setValue(e.target.value)}
           />
-        </form>
+        </form> 
 
-        {!tableMode ? (
-			<button type="button" onClick={() => setTableMode(true)} className={style.switch__photos_style}> Table Mode </button>
-  
-        ) : (
-			<button type="button" onClick={() => setTableMode(false)} className={style.switch__photos_style}> Grid Mode </button>
-   
-        )}
+		<div className={style.checkbox}>
+    		<input type="checkbox" id="checked" className={style.checkbox__input} 
+				onClick={!tableMode ? () => setTableMode(true) : () => setTableMode(false)}/>
+    		<label htmlFor="checked" className={style.checkbox__label}> 
+				<div className={style.checkbox__text}> G L</div> 
+			</label>
+		</div>
       </div>
 
       {!tableMode ? (
