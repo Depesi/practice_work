@@ -12,11 +12,11 @@ const Main = ({ sliderPhotos, getSliderPhotos }) => {
 
   const maxLength = 10;
   return (
-    <div>
+    <div className={style.mainPage__container}>
       <div className="container">
         <div className={style.slider__heading}> Найближчі події</div>
         <Slider sliderPhotos={sliderPhotos} maxLength={maxLength} />
-        <div className={style.grid__heading}> Галерея </div>
+        <div className={style.grid__heading}> Список фільмів </div>
         <Grid gridPhotos={sliderPhotos} maxLength={maxLength} />
       </div>
     </div>

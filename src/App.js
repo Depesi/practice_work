@@ -6,7 +6,7 @@ import { compose } from 'redux';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getThemeMode, setError } from './redux/app-reducer';
-import closeIcon from './img/Close_icon.svg';
+// import closeIcon from './img/Close_icon.svg';
 import './App.scss';
 import Contacts from './components/Contacts/Contacts';
 import HeaderContainer from './components/Header/Container/HeaderContainer';
@@ -16,6 +16,7 @@ import {
   getInitializeApp,
 } from './redux/app-selectors';
 import MainContainer from './components/Main/Container/MainContainer';
+import Footer from './components/Footer/Footer';
 
 const App = props => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const App = props => {
             <Route path="/contacts" render={() => <Contacts />} />
           </Switch>
 
-          {props.appError && (
+          {/* {props.appError && (
             <div className="error__container">
               <div
                 role="button"
@@ -60,9 +61,10 @@ const App = props => {
               </div>
               <span className="error__container_text"> An error occurred </span>
             </div>
-          )}
+          )} */}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
@@ -71,8 +73,8 @@ App.propTypes = {
   getThemeMode: PropTypes.func.isRequired,
   initializeApp: PropTypes.bool.isRequired,
   darkMode: PropTypes.bool.isRequired,
-  appError: PropTypes.bool.isRequired,
-  setError: PropTypes.bool.isRequired,
+  //   appError: PropTypes.bool.isRequired,
+  //   setError: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => {

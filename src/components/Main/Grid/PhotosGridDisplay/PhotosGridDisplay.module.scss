@@ -17,6 +17,7 @@
 	position: absolute;
 	opacity: 1;
 	transition: 0.5s;
+	object-fit: cover;
 }
 
 .gridPhotos__item_title {
@@ -32,14 +33,14 @@
 	position: relative;
 	background-color: black;
 	overflow: hidden;
-  
+
 	&:hover {
 	  .gridPhotos__item {
 		opacity: 0.5;
 	  }
 	  .gridPhotos__item_title {
-		position: absolute;
 		transform: translate(0, 0);
+		text-align: center;
 	  }
 	}
 }

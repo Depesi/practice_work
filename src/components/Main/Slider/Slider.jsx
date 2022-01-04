@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
@@ -37,7 +39,22 @@ const Slider = ({ sliderPhotos, maxLength }) => {
                 : `${style.slide}`
             }
           >
-            <img src={img.url} alt={img.title}></img>
+            <div className={style.slide__title}>
+              {img.title}
+              <div>Дата релізу: 04.01.2022</div>
+            </div>
+            <img
+              src={img.url}
+              alt={img.title}
+              onClick={() => {
+                // eslint-disable-next-line no-console
+                console.log(
+                  currentImage,
+                  '----',
+                  sortPhotos[currentImage - 1].title,
+                );
+              }}
+            ></img>
           </div>
         );
       })}
