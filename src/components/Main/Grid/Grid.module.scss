@@ -89,6 +89,15 @@
 	border: none;
 }
 
+.select__input {
+	font-size: 16px;
+	padding: 10px 8px;
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
 .above__table {
 	display: flex;
 	justify-content: space-between;
