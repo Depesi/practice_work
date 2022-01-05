@@ -189,3 +189,39 @@
 }
 
 //Check box for switching 
+
+.controll__buttons_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& input {
+		display: none;
+	}
+}
+
+.button {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: all 0.3s;
+	background-color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 50px;
+}
+
+.right {
+	background: url("../../../assets/icons/right-arrow.svg") no-repeat center;
+}
+
+.left {
+	background: url("../../../assets/icons/left-arrow.svg") no-repeat center;
+}
+
+.disabled {
+	opacity: 0.5;
+	cursor: default;
+}

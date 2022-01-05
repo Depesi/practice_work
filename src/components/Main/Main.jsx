@@ -9,15 +9,15 @@ const Main = ({ sliderPhotos, getSliderPhotos }) => {
   useEffect(() => {
     getSliderPhotos();
   }, []);
+  const pageSize = 10;
 
-  const maxLength = 10;
   return (
     <div className={style.mainPage__container}>
       <div className="container">
-        <div className={style.slider__heading}> Найближчі події</div>
-        <Slider sliderPhotos={sliderPhotos} maxLength={maxLength} />
-        <div className={style.grid__heading}> Список фільмів </div>
-        <Grid gridPhotos={sliderPhotos} maxLength={maxLength} />
+        <div className={style.slider__heading}> Выбор критиков</div>
+        <Slider sliderPhotos={sliderPhotos} pageSize={pageSize} />
+        <div className={style.grid__heading}> Список фильмов </div>
+        <Grid gridPhotos={sliderPhotos} pageSize={pageSize} />
       </div>
     </div>
   );

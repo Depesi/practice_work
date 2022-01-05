@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
@@ -7,8 +6,19 @@ import PropTypes from 'prop-types';
 import BtnSlider from './BtnSlider';
 import style from './Slider.module.scss';
 
-const Slider = ({ sliderPhotos, maxLength }) => {
-  const sortPhotos = sliderPhotos.filter(i => i.id <= maxLength);
+const Slider = ({ sliderPhotos, pageSize }) => {
+  const sortPhotos = sliderPhotos
+    .filter(i => i.rate >= 9)
+    .sort((a, b) => {
+      if (a.rate > b.rate) {
+        return 1;
+      }
+      if (a.rate < b.rate) {
+        return -1;
+      }
+      return 0;
+    })
+    .reverse();
   const [currentImage, setCurrentImage] = useState(1);
 
   const nextSlide = () => {
@@ -41,7 +51,7 @@ const Slider = ({ sliderPhotos, maxLength }) => {
           >
             <div className={style.slide__title}>
               {img.title}
-              <div>Дата релізу: 04.01.2022</div>
+              <div>Рейтинг: {img.rate}</div>
             </div>
             <img
               src={img.url}
@@ -52,6 +62,8 @@ const Slider = ({ sliderPhotos, maxLength }) => {
                   currentImage,
                   '----',
                   sortPhotos[currentImage - 1].title,
+                  sortPhotos[currentImage - 1].rate,
+                  sortPhotos[currentImage - 1].description,
                 );
               }}
             ></img>
@@ -66,11 +78,11 @@ const Slider = ({ sliderPhotos, maxLength }) => {
 
 Slider.defaultProps = {
   sliderPhotos: [],
-  maxLength: 10,
+  pageSize: 10,
 };
 Slider.propTypes = {
   sliderPhotos: PropTypes.array,
-  maxLength: PropTypes.number,
+  pageSize: PropTypes.number,
 };
 
 export default Slider;

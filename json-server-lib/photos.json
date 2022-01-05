@@ -6,192 +6,182 @@
     {
       "id": 1,
       "title": "Человек-паук: Нет пути домой",
-	  "genre": "Фантастика",
-	  "url": "https://s.kinoprofi.vip/s/2021-12/1639266504_chelovek-pauk-net-puti-domoy-2.jpg",
+	  "rate": 9.5, 
+	  "description": "",
+      "genre": "Фантастика",
+      "url": "https://s.kinoprofi.vip/s/2021-12/1639266504_chelovek-pauk-net-puti-domoy-2.jpg",
       "thumbnailUrl": "https://static.kinoafisha.info/k/movie_posters/canvas/210x220/upload/movie_posters/6/8/5/8356586/acb59318c76683bf3dcb8b7d5e86c7c6.jpg"
     },
     {
       "id": 2,
       "title": "Дом Gucci",
-	  "genre": "Драма",
+	  "rate": 9.5, 
+	  "description": "",
+      "genre": "Драма",
       "url": "https://user72902.clients-cdnnow.ru/localStorage/news/82/ea/a7/d9/82eaa7d9_resizedScaled_1020to574.jpg",
       "thumbnailUrl": "https://assets.vogue.ru/photos/6048cdf7d979e319891ac19d/1:1/w_210,h_220,c_limit/LGN51763525_.jpg"
     },
     {
       "id": 3,
       "title": "Матрица: Воскрешение",
-	  "genre": "Боевик",
+	  "rate": 9.7,
+	  "description": "",
+      "genre": "Боевик",
       "url": "https://img.championat.com/s/700x500/news/big/t/u/vse-spojlery-matrica-4-voskreshenie_1639657653255165739.jpg",
       "thumbnailUrl": "https://img.championat.com/s/210x220/news/big/z/z/obzor-matrica-4-voskreshenie_1639587558419925185.jpg"
     },
     {
       "id": 4,
       "title": "Один дома",
-	  "genre": "Комедия",
+	  "rate": 10,
+	  "description": "",
+      "genre": "Комедия",
       "url": "http://www.pravoslavie.ru/sas/image/102813/281317.p.jpg",
       "thumbnailUrl": "https://www.kino-teatr.ru/news/21803/bg.jpg"
     },
     {
       "id": 5,
       "title": "Волк с Уолл-стрит",
-	  "genre": "Криминальный жанр",
+	  "rate": 10,
+	  "description": "",
+      "genre": "Криминальный жанр",
       "url": "https://albione.ru/upload/iblock/8a9/8a9d352dedbd045d57942ab014bb16de.png",
       "thumbnailUrl": "https://assets.gq.ru/photos/5d9f7a9fae00fb00090c4483/16:9/w_1280,c_limit/anons.jpg"
     },
     {
       "id": 6,
       "title": "Зверопой 2",
-	  "genre": "Комедия",
+	  "rate": 8.3,
+	  "description": "",
+      "genre": "Комедия",
       "url": "https://sci-fi-news.ru/wp-content/uploads/2021/12/Sing-2.jpg",
       "thumbnailUrl": "https://cdn1.intermedia.ru/img/news_x400/353827.jpg"
     },
     {
       "id": 7,
       "title": "Большой красный пёс Клиффорд",
-	  "genre": "Комедия",	
+	  "rate": 6.3,
+	  "description": "",
+      "genre": "Комедия",
       "url": "https://sci-fi-news.ru/wp-content/uploads/2021/12/Clifford-The-Big-Red-Dog-1.jpg",
       "thumbnailUrl": "https://fuzzmusic.ru/wp-content/uploads/2021/11/Muzyka-i-saundtreki-iz-filma-Bolshoy-krasnyy-pes-Klifford-ost-2021-clifford-the-big-red-dog.jpg"
     },
     {
       "id": 8,
       "title": "Охотники за привидениями: Наследники",
-	  "genre": "Боевик",
+	  "rate": 7.9,
+	  "description": "",
+      "genre": "Боевик",
       "url": "https://img.championat.com/s/735x490/news/big/r/r/obzor-ohotnikov-za-privideniyami-nasledniki_16371636711379898830.jpg",
       "thumbnailUrl": "https://image.kinoprofi.vip/p/2021-11/400x600/1637936007_ohotniki-za-privideniyami-nasledniki.jpg"
     },
     {
       "id": 9,
       "title": "Остров проклятых",
-	  "genre": "Детектив", 
-	  "url": "https://www.soyuz.ru/public/uploads/files/5/7233963/1005x558_201811171155444cb5dd7bb3.jpg",
+	  "rate": 9.4,
+	  "description": "",
+      "genre": "Детектив",
+      "url": "https://www.soyuz.ru/public/uploads/files/5/7233963/1005x558_201811171155444cb5dd7bb3.jpg",
       "thumbnailUrl": "https://yeltsin.ru/imageurl/c400x400/archive/image/Jz1nASyEGzMnE05eDyOdZxWEGw0X/uploads/upload/2021/08/05/1_KcGiO0K.jpg"
     },
     {
       "id": 10,
       "title": "Красное уведомление",
-	  "genre": "Комедия",
+	  "rate": 9,
+	  "description": "",
+      "genre": "Комедия",
       "url": "https://s3.afisha.ru/mediastorage/d8/b5/44dda2e2d96e451b8081e281b5d8.jpg",
       "thumbnailUrl": "https://itc.ua/wp-content/uploads/2021/11/oblozhka-5.jpg"
     },
     {
       "id": 11,
-      "title": "nihil at amet non hic quia qui",
-      "url": "https://via.placeholder.com/600/1ee8a4",
-      "thumbnailUrl": "https://via.placeholder.com/150/1ee8a4"
+      "title": "Не смотрите наверх",
+	  "rate": 9.1,
+	  "description": "",
+      "genre": "Комедия",
+      "url": "https://1.bp.blogspot.com/-FeZeZZh01Ro/YVsLBguUkcI/AAAAAAABlgw/8DnZ47GyoXw2hGrYQXGrJjXSW0JnQ1EewCLcBGAsYHQ/s1600/titulkafilm.webp",
+      "thumbnailUrl": "https://s3.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2021/12/di-kaprio-v-filme-ne-smotrite-naverh.jpg"
     },
     {
       "id": 12,
-      "title": "mollitia soluta ut rerum eos aliquam consequatur perspiciatis maiores",
-      "url": "https://via.placeholder.com/600/66b7d2",
-      "thumbnailUrl": "https://via.placeholder.com/150/66b7d2"
+      "title": "Непрощенная",
+	  "rate": 8.4,
+	  "description": "",
+      "genre": "Драма",
+      "url": "https://www.soyuz.ru/public/uploads/files/5/7476510/1005x558_202112131249216be2c68b80.jpg",
+      "thumbnailUrl": "https://s.kinoprofi.vip/s/2021-12/1638656099_neproschennaya-1.jpg"
     },
     {
       "id": 13,
-      "title": "repudiandae iusto deleniti rerum",
-      "url": "https://via.placeholder.com/600/197d29",
-      "thumbnailUrl": "https://via.placeholder.com/150/197d29"
+      "title": "Кислород",
+	  "rate": 6.3,
+	  "description": "",
+      "genre": "Фантастика",
+      "url": "https://s.kinokrad.co/uploads/posts/2021-05/1621769560_screenshot_4.jpg",
+      "thumbnailUrl": "https://ru-images.kinorium.com/movie/200/1629699.jpg?1622191696"
     },
     {
       "id": 14,
-      "title": "est necessitatibus architecto ut laborum",
-      "url": "https://via.placeholder.com/600/61a65",
-      "thumbnailUrl": "https://via.placeholder.com/150/61a65"
+      "title": "Веном 2",
+	  "rate": 7.3,
+	  "description": "",
+      "genre": "Боевик",
+      "url": "https://img.championat.com/s/735x490/news/big/e/u/venom-2-samyj-kassovyj-film-2021-goda-dlya-rossii-sbory-vyshe-2-048-mlrd-rublej_16372547902097224411.jpg",
+      "thumbnailUrl": "https://www.kinonews.ru/insimgs/2021/newsimg/newsimg101640.jpg"
     },
     {
       "id": 15,
-      "title": "harum dicta similique quis dolore earum ex qui",
-      "url": "https://via.placeholder.com/600/f9cee5",
-      "thumbnailUrl": "https://via.placeholder.com/150/f9cee5"
+      "title": "Армия воров",
+	  "rate": 4,
+	  "description": "",
+      "genre": "Триллер",
+      "url": "https://www.soyuz.ru/public/uploads/files/5/7474555/1005x558_20211030211417aa34895f50.jpg",
+      "thumbnailUrl": "https://www.kino-teatr.ru/movie/kadr/148446/1052268.jpg"
     },
     {
       "id": 16,
-      "title": "iusto sunt nobis quasi veritatis quas expedita voluptatum deserunt",
-      "url": "https://via.placeholder.com/600/fdf73e",
-      "thumbnailUrl": "https://via.placeholder.com/150/fdf73e"
+      "title": "Женщина в окне",
+	  "rate": 8.3,
+	  "description": "",
+      "genre": "Детектив",
+      "url": "https://filmix.ac/uploads/frames/151275/f328756-mp3-zhenschina-v-okne-2021_original.jpg",
+      "thumbnailUrl": "https://phototass3.cdnvideo.ru/width/960_51849019/tass/m2/uploads/i/20210416/6083635.jpg"
     },
     {
       "id": 17,
-      "title": "natus doloribus necessitatibus ipsa",
-      "url": "https://via.placeholder.com/600/9c184f",
-      "thumbnailUrl": "https://via.placeholder.com/150/9c184f"
+      "title": "Schumacher",
+	  "rate": 8.4,
+	  "description": "",
+      "genre": "Документальный фильм",
+      "url": "https://zetflix.pro/uploads/posts/2021-09/1631721119_netflix.jpg",
+      "thumbnailUrl": "https://cdn.f1ne.ws/userfiles/mschumacher/155587.jpg"
     },
     {
       "id": 18,
-      "title": "laboriosam odit nam necessitatibus et illum dolores reiciendis",
-      "url": "https://via.placeholder.com/600/1fe46f",
-      "thumbnailUrl": "https://via.placeholder.com/150/1fe46f"
+      "title": "Бесконечность",
+	  "rate": 9.1,
+	  "description": "",
+      "genre": "Боевик",
+      "url": "https://s4.afisha.ru/mediastorage/ca/b6/de497ae74d6d488db97d5bc5b6ca.jpg",
+      "thumbnailUrl": "https://s.kinokrad.co/uploads/posts/2021-06/1623869508_screenshot_4.jpg"
     },
     {
       "id": 19,
-      "title": "perferendis nesciunt eveniet et optio a",
-      "url": "https://via.placeholder.com/600/56acb2",
-      "thumbnailUrl": "https://via.placeholder.com/150/56acb2"
+      "title": "Война будущего",
+	  "rate": 7.6,
+	  "description": "",
+      "genre": "Боевик",
+      "url": "https://flashforward.media/wp-content/uploads/2021/07/the_tomorrow_war_cover-1200x630.jpg",
+      "thumbnailUrl": "https://www.hdfilmlenta.com/uploads/posts/2021-09/1632188683_2-voyna-buduschego.jpg"
     },
     {
       "id": 20,
-      "title": "assumenda voluptatem laboriosam enim consequatur veniam placeat reiciendis error",
-      "url": "https://via.placeholder.com/600/8985dc",
-      "thumbnailUrl": "https://via.placeholder.com/150/8985dc"
-    },
-    {
-      "id": 21,
-      "title": "ad et natus qui",
-      "url": "https://via.placeholder.com/600/5e12c6",
-      "thumbnailUrl": "https://via.placeholder.com/150/5e12c6"
-    },
-    {
-      "id": 22,
-      "title": "et ea illo et sit voluptas animi blanditiis porro",
-      "url": "https://via.placeholder.com/600/45601a",
-      "thumbnailUrl": "https://via.placeholder.com/150/45601a"
-    },
-    {
-      "id": 23,
-      "title": "harum velit vero totam",
-      "url": "https://via.placeholder.com/600/e924e6",
-      "thumbnailUrl": "https://via.placeholder.com/150/e924e6"
-    },
-    {
-      "id": 24,
-      "title": "beatae officiis ut aut",
-      "url": "https://via.placeholder.com/600/8f209a",
-      "thumbnailUrl": "https://via.placeholder.com/150/8f209a"
-    },
-    {
-      "id": 25,
-      "title": "facere non quis fuga fugit vitae",
-      "url": "https://via.placeholder.com/600/5e3a73",
-      "thumbnailUrl": "https://via.placeholder.com/150/5e3a73"
-    },
-    {
-      "id": 26,
-      "title": "asperiores nobis voluptate qui",
-      "url": "https://via.placeholder.com/600/474645",
-      "thumbnailUrl": "https://via.placeholder.com/150/474645"
-    },
-    {
-      "id": 27,
-      "title": "sit asperiores est quos quis nisi veniam error",
-      "url": "https://via.placeholder.com/600/c984bf",
-      "thumbnailUrl": "https://via.placeholder.com/150/c984bf"
-    },
-    {
-      "id": 28,
-      "title": "non neque eligendi molestiae repudiandae illum voluptatem qui aut",
-      "url": "https://via.placeholder.com/600/392537",
-      "thumbnailUrl": "https://via.placeholder.com/150/392537"
-    },
-    {
-      "id": 29,
-      "title": "aut ipsam quos ab placeat omnis",
-      "url": "https://via.placeholder.com/600/602b9e",
-      "thumbnailUrl": "https://via.placeholder.com/150/602b9e"
-    },
-    {
-      "id": 30,
-      "title": "odio enim voluptatem quidem aut nihil illum",
-      "url": "https://via.placeholder.com/600/372c93",
-      "thumbnailUrl": "https://via.placeholder.com/150/372c93"
+      "title": "Без жалости",
+	  "rate": 8,
+	  "description": "",
+      "genre": "Боевик",
+      "url": "https://kinosvami.ru/wp-content/uploads/2021/05/yy08-1-1-1024x576.jpg",
+      "thumbnailUrl": "https://cdnimg.rg.ru/img/content/205/28/48/d9xkiwm6_d_850.jpg"
     }
   ]
 }
