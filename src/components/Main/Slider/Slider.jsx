@@ -5,8 +5,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import BtnSlider from './BtnSlider';
 import style from './Slider.module.scss';
+import Modal from '../../Modal/Modal';
 
 const Slider = ({ sliderPhotos, pageSize }) => {
+  const [modalActive, setModalActive] = useState(false);
+  const [currentImage, setCurrentImage] = useState(1);
+
   const sortPhotos = sliderPhotos
     .filter(i => i.rate >= 9)
     .sort((a, b) => {
@@ -19,7 +23,6 @@ const Slider = ({ sliderPhotos, pageSize }) => {
       return 0;
     })
     .reverse();
-  const [currentImage, setCurrentImage] = useState(1);
 
   const nextSlide = () => {
     if (currentImage !== sortPhotos.length) {
@@ -38,41 +41,45 @@ const Slider = ({ sliderPhotos, pageSize }) => {
   };
 
   return (
-    <div className={style.container__slider}>
-      {sortPhotos.map((img, index) => {
-        return (
-          <div
-            key={img.id}
-            className={
-              currentImage === index + 1
-                ? `${style.slide} ${style.active__anim}`
-                : `${style.slide}`
-            }
-          >
-            <div className={style.slide__title}>
-              {img.title}
-              <div>Рейтинг: {img.rate}</div>
+    <>
+      <div className={style.container__slider}>
+        {sortPhotos.map((img, index) => {
+          return (
+            <div
+              key={img.id}
+              className={
+                currentImage === index + 1
+                  ? `${style.slide} ${style.active__anim}`
+                  : `${style.slide}`
+              }
+            >
+              <div className={style.slide__title}>
+                {img.title}
+                <div>Рейтинг: {img.rate}</div>
+              </div>
+              <img
+                src={img.url}
+                alt={img.title}
+                onClick={() => {
+                  setModalActive(true);
+                }}
+              ></img>
             </div>
-            <img
-              src={img.url}
-              alt={img.title}
-              onClick={() => {
-                // eslint-disable-next-line no-console
-                console.log(
-                  currentImage,
-                  '----',
-                  sortPhotos[currentImage - 1].title,
-                  sortPhotos[currentImage - 1].rate,
-                  sortPhotos[currentImage - 1].description,
-                );
-              }}
-            ></img>
-          </div>
-        );
-      })}
-      <BtnSlider moveSlide={nextSlide} direction="next" />
-      <BtnSlider moveSlide={prevSlide} direction="prev" />
-    </div>
+          );
+        })}
+        <BtnSlider moveSlide={nextSlide} direction="next" />
+        <BtnSlider moveSlide={prevSlide} direction="prev" />
+      </div>
+
+      <Modal
+        active={modalActive}
+        setActive={setModalActive}
+        title={sortPhotos[currentImage - 1]?.title}
+        description={sortPhotos[currentImage - 1]?.description}
+        rate={sortPhotos[currentImage - 1]?.rate}
+        photo={sortPhotos[currentImage - 1]?.url}
+      />
+    </>
   );
 };
 

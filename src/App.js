@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/order */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect } from 'react';
@@ -6,15 +8,10 @@ import { compose } from 'redux';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getThemeMode, setError } from './redux/app-reducer';
-// import closeIcon from './img/Close_icon.svg';
 import './App.scss';
 import Contacts from './components/Contacts/Contacts';
 import HeaderContainer from './components/Header/Container/HeaderContainer';
-import {
-  getAppError,
-  getDarkMode,
-  getInitializeApp,
-} from './redux/app-selectors';
+import { getDarkMode, getInitializeApp } from './redux/app-selectors';
 import MainContainer from './components/Main/Container/MainContainer';
 import Footer from './components/Footer/Footer';
 
@@ -69,7 +66,6 @@ const mapStateToProps = state => {
   return {
     darkMode: getDarkMode(state),
     initializeApp: getInitializeApp(state),
-    appError: getAppError(state),
   };
 };
 

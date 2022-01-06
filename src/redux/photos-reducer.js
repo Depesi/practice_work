@@ -7,6 +7,8 @@ const initialState = {
     {
       id: 1,
       title: '',
+      rate: 0,
+      description: '',
       genre: '',
       url: '',
       thumbnailUrl: '',

@@ -1,15 +1,16 @@
-/* eslint-disable no-undef */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-unneeded-ternary */
+/* eslint-disable no-debugger */
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from './PhotosGridDisplay.module.scss';
+import Modal from '../../../Modal/Modal';
 
 const PhotosGridDisplay = props => {
-  useEffect(() => {
-    console.log(props.filteredPhoto);
-  }, [props.filteredPhoto]);
+  const [modalActive, setModalActive] = useState(false);
+  const [currentFilm, setCurrentFilm] = useState([]);
 
   return (
     <>
@@ -21,7 +22,14 @@ const PhotosGridDisplay = props => {
         <div className={style.gridPhotos__container}>
           {props.filteredPhoto.map(img => {
             return (
-              <div className={style.gridPhotos__item_overlay} key={img.id}>
+              <div
+                className={style.gridPhotos__item_overlay}
+                key={img.id}
+                onClick={() => {
+                  setModalActive(true);
+                  setCurrentFilm(img);
+                }}
+              >
                 <img
                   className={style.gridPhotos__item}
                   src={img.thumbnailUrl}
@@ -31,6 +39,14 @@ const PhotosGridDisplay = props => {
               </div>
             );
           })}
+          <Modal
+            active={modalActive}
+            setActive={setModalActive}
+            title={currentFilm?.title}
+            description={currentFilm?.description}
+            rate={currentFilm?.rate}
+            photo={currentFilm?.url}
+          />
         </div>
       )}
     </>
