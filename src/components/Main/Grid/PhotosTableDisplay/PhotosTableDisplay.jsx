@@ -4,22 +4,30 @@ import style from './PhotosTableDisplay.module.scss';
 
 const PhotosTableDisplay = props => {
   return (
-    <div className={style.tablePhotos__container}>
-      {props.filteredPhoto.map(img => {
-        return (
-          <div className={style.tablePhotos__item} key={img.id}>
-            <img
-              className={style.tablePhotos__item_photo}
-              src={img.thumbnailUrl}
-              alt={img.title}
-            />
-            <div className={style.tablePhotos__item_description}>
-              {img.title}
-            </div>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      {!props.filteredPhoto.length ? (
+        <div className={style.noFounded__movies}>
+          За этим запросом на этой странице не найдемо фильмов
+        </div>
+      ) : (
+        <div className={style.tablePhotos__container}>
+          {props.filteredPhoto.map(img => {
+            return (
+              <div className={style.tablePhotos__item} key={img.id}>
+                <img
+                  className={style.tablePhotos__item_photo}
+                  src={img.thumbnailUrl}
+                  alt={img.title}
+                />
+                <div className={style.tablePhotos__item_description}>
+                  {img.title}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 };
 

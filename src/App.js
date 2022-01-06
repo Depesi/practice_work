@@ -46,22 +46,6 @@ const App = props => {
             <Route path="/main" render={() => <MainContainer />} />
             <Route path="/contacts" render={() => <Contacts />} />
           </Switch>
-
-          {/* {props.appError && (
-            <div className="error__container">
-              <div
-                role="button"
-                tabIndex={0}
-                className="error__container_close"
-                onClick={() => {
-                  props.setError(false);
-                }}
-              >
-                <img src={closeIcon} alt="close" />
-              </div>
-              <span className="error__container_text"> An error occurred </span>
-            </div>
-          )} */}
         </div>
       </div>
       <Footer />
@@ -69,12 +53,16 @@ const App = props => {
   );
 };
 
+App.defaultProps = {
+  getThemeMode: () => {},
+  initializeApp: false,
+  darkMode: false,
+};
+
 App.propTypes = {
-  getThemeMode: PropTypes.func.isRequired,
-  initializeApp: PropTypes.bool.isRequired,
-  darkMode: PropTypes.bool.isRequired,
-  //   appError: PropTypes.bool.isRequired,
-  //   setError: PropTypes.bool.isRequired,
+  getThemeMode: PropTypes.func,
+  initializeApp: PropTypes.bool,
+  darkMode: PropTypes.bool,
 };
 
 const mapStateToProps = state => {

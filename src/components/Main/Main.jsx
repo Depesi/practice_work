@@ -9,6 +9,7 @@ const Main = ({ sliderPhotos, getSliderPhotos }) => {
   useEffect(() => {
     getSliderPhotos();
   }, []);
+
   const pageSize = 10;
 
   return (

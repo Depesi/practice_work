@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-autofocus */
+/* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable no-unneeded-ternary */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -22,7 +24,13 @@ const Grid = props => {
 	  .filter(img => {
     return img?.title?.toLowerCase().includes(value.toLowerCase()) && img?.genre?.toLowerCase().includes(genre.toLowerCase());
   });
-  const allGenres = new Set(props.gridPhotos.map(img => img.genre))
+
+  const allGenres = new Set (props.gridPhotos.map(img => img.genre));
+//   const allGenres = new Set (props.gridPhotos
+// 	.filter(
+// 		img =>
+// 		  img.id >= currentPage && img.id < props.pageSize + currentPage,
+// 	  ).map(img => img.genre));
 
   return (
     <>
@@ -37,8 +45,8 @@ const Grid = props => {
         </form> 
 		<div>
 			Фильтр: <select name="select__genre" required="required" className={style.select__input} onChange={e => setGenre(e.target.value)}>
-				<option value=''>Все фильмы</option>	
-				{[...allGenres].map((img, index) => {
+				<option value=''> Все фильмы</option>	
+				{[...allGenres].sort().map((img, index) => {
 					return (
 						<option key={index} value={img}>{img}</option>
 					);
@@ -102,6 +110,6 @@ const Grid = props => {
 };
 Grid.propTypes = {
   gridPhotos: PropTypes.array.isRequired,
-  pageSize: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,	
 };
 export default Grid;
