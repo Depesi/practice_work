@@ -1,3 +1,5 @@
+@import '../../assets/styles/variables.scss';
+
 .modal {
 	height: 100vh;
 	width: 100vw;
@@ -31,6 +33,18 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+
+	@media (max-width: $secondTabletScreen) {
+		max-width: 70%;
+	}
+	
+	@media (max-width: $firstMobileScreen) {
+		max-height: 85%;
+	}
+
+	@media (max-width: 500px) {
+		max-height: 70%;
+	}
 }
 
 .modal__content_title {
@@ -39,6 +53,11 @@
 	justify-content: center;
 	margin-bottom: 10px;
 	font-weight: 500;
+
+	@media (max-width: 500px) {
+		font-size: 16px;
+		text-align: center;
+	}
 }
 .modal__content_image {
 	max-height: 400px;
@@ -52,6 +71,37 @@
 	& span {
 		font-weight: 500;
 	}
+	
+	&::-webkit-scrollbar {
+		opacity: 0;
+		width: 5px;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: 2px 2px 2px -2px rgba(34, 60, 80, 0.2) inset;
+		background-color: transparent;
+		border-radius: 10px;
+	  }
+	  
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: linear-gradient(180deg, #3d5055, #0f1827);
+	  }
+
+	@media (max-width: $firstMobileScreen) {
+		max-height: 350px;
+		overflow: hidden;
+		overflow-y: auto;
+		text-align: center;
+	}
+	
+	@media (max-width: 500px) {
+		font-size: 16px;
+	}
+	@media (max-width: $secondMobileScreen) {
+		font-size: 14px;
+	}
 }
 
 .modal__content_rate {	 
@@ -59,12 +109,6 @@
     align-items: center;
 	position: relative;
 	&::after {
-		// position: absolute;
-		// content: " ";
-		// width: 32px;
-		// height: 32px;
-		// background-image: url('../../assets/icons/rating-star.svg') no-repeat center;
-		// margin-left: 5px;
 		content: '';
 		position: absolute;
 		right: -25px;
@@ -72,5 +116,10 @@
 		height: 25px;
 		background: url('../../assets/icons/star.svg') no-repeat center;
 	}
- 
+	@media (max-width: 500px) {
+		font-size: 16px;
+	}
+	@media (max-width: $secondMobileScreen) {
+		font-size: 14px;
+	}
 }

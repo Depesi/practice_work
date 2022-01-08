@@ -1,228 +1,267 @@
-@import '../../../assets/styles/variables.scss';
+@import "../../../assets/styles/variables.scss";
 
 .switch__photos_style {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .photos__grid {
-	display: grid;
-	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: repeat(2, 220px);
-	box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(2, 220px);
+  box-sizing: border-box;
 
-	@media (max-width: 900px) {
-		grid-template-rows: repeat(2, 150px);
-	}
+ 
 }
 
 .photos__grid_itemOverlay {
-	position: relative;
-	background-color: black;
-	overflow: hidden;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
 
-	&:hover {
-		.photos__grid_item {
-			opacity: 0.5;
-		}
-		.grid__item_title {
-			position: absolute;
-			transform: translate(0, 0);
-		}
-	}
+  &:hover {
+    .photos__grid_item {
+      opacity: 0.5;
+    }
+    .grid__item_title {
+      position: absolute;
+      transform: translate(0, 0);
+    }
+  }
 }
 
 .photos__grid_item {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	opacity: 1;
-	transition: 0.5s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .grid__item_title {
-	transform: translate(0, -100%);
-	transition: all 0.5s;
-	text-align: center;
-	padding: 20px;
-	font-size: 20px;
-	color: $white;
+  transform: translate(0, -100%);
+  transition: all 0.5s;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  color: $white;
 }
 
 .photos__table {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .photos__table_container {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 23%;
-	background-color: $white;
-	border-radius: 16px;
-	margin-bottom: 25px;
-	margin-right: 28px;
-	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: column;
+  flex-basis: 23%;
+  background-color: $white;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  margin-right: 28px;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
 
-	&:nth-child(4n) {
-		margin-right: 0;
-	}
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 .photos__table_photo {
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	margin-bottom: 10px;
-	filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
 }
 
 .table__item_description {
-	padding: 0 10px;
-	padding-bottom: 10px;
+  padding: 0 10px;
+  padding-bottom: 10px;
 }
 
 .search__input {
-	font-size: 16px;
-	width: 300px;
-	padding: 10px 8px;
-	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-	outline: none;
-	border: none;
+  font-size: 16px;
+  width: 240px;
+  padding: 10px 8px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  outline: none;
+  border: none;
+  margin-right: 30px;
+
+  @media (max-width: $firstTabletScreen) {
+	width: 200px;
+  }
+  
+  @media (max-width: $firstMobileScreen) {
+	font-size: 14px;
+	padding: 8px 6px;
+	width: 180px;
+	margin-bottom: 10px;
+  }
 }
 
 .select__input {
-	font-size: 16px;
-	padding: 10px 8px;
-	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-	outline: none;
-	border: none;
-	cursor: pointer;
+  font-size: 16px;
+  padding: 10px 8px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 240px;
+  
+  @media (max-width: $firstTabletScreen) {
 	width: 200px;
+  }
+  
+  @media (max-width: $firstMobileScreen) {
+	font-size: 14px;
+	padding: 8px 6px;
+	width: 180px;
+  }
+}
+
+.filters__container {
+	display: flex;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+	  }
 }
 
 .above__table {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media (max-width: $firstMobileScreen) {
+	align-items: baseline;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 500px) {
 	align-items: center;
-	margin-bottom: 15px;
+    margin-bottom: 10px;
+  }
 }
 
 .above__grid {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .switch__photos_style {
-	display: inline-block;
-	padding: 10px 12px;
-	border: 2px solid $mainColor;
-	background-color: $mainColor;
-	box-sizing: border-box;
-	border-radius: 30px;
-	transition: all 0.3s;
-	color: $white;
-	font-size: 16px;
-	cursor: pointer;
+  display: inline-block;
+  padding: 10px 12px;
+  border: 2px solid $mainColor;
+  background-color: $mainColor;
+  box-sizing: border-box;
+  border-radius: 30px;
+  transition: all 0.3s;
+  color: $white;
+  font-size: 16px;
+  cursor: pointer;
 
-	&:hover {
-		color: $mainColor;
-		background-color: $white;
-	}
+  &:hover {
+    color: $mainColor;
+    background-color: $white;
+  }
 }
 
-//Check box for switching 
+//Check box for switching
 
 .checkbox {
-	.checkbox__label {
-	  position: relative;
-	  display: block;
-	  height: 25px;
-	  width: 49px;
-	  background: $mainColor;
-	  border-radius: 100px;
-	  cursor: pointer;
-	  transition: all 300ms ease;
-	  &:after {
-		position: absolute;
-		left: -2px;
-		top: -3px;
-		display: block;
-		width: 31px;
-		height: 31px;
-		border-radius: 100px;
-		background: lighten($mainColor, 30%);
-		box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
-		content: '';
-		transition: all 300ms ease;
-	  }
-	  &:active:after {
-		transform: scale(1.15, 0.85);
-	  }
-	}
-  
-	.checkbox__input {
-	  display: none;
-	  &:checked ~ label {
-		background: $mainColor;
-		&:after {
-		  left: 20px;
-		  background: darken($mainColor, 15%);
-		}
-	  }
-	  &:disabled ~ label {
-		background: lighten($mainColor, 30%);
-		pointer-events: none;
-		&:after {
-		  background: lighten($mainColor, 20%);;
-		}
-	  }
-	}
-	.checkbox__text {
-		display: flex;
-		height: 25px;
-		width: 49px;
-		align-items: center;
-		font-size: 16px;
-		word-spacing: 11px;
-		color: $white;
-		padding-left: 5px;
-	}
+  .checkbox__label {
+    position: relative;
+    display: block;
+    height: 25px;
+    width: 49px;
+    background: $mainColor;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:after {
+      position: absolute;
+      left: -2px;
+      top: -3px;
+      display: block;
+      width: 31px;
+      height: 31px;
+      border-radius: 100px;
+      background: lighten($mainColor, 30%);
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+      content: "";
+      transition: all 300ms ease;
+    }
+    &:active:after {
+      transform: scale(1.15, 0.85);
+    }
+  }
+
+  .checkbox__input {
+    display: none;
+    &:checked ~ label {
+      background: $mainColor;
+      &:after {
+        left: 20px;
+        background: darken($mainColor, 15%);
+      }
+    }
+    &:disabled ~ label {
+      background: lighten($mainColor, 30%);
+      pointer-events: none;
+      &:after {
+        background: lighten($mainColor, 20%);
+      }
+    }
+  }
+  .checkbox__text {
+    display: flex;
+    height: 25px;
+    width: 49px;
+    align-items: center;
+    font-size: 16px;
+    word-spacing: 11px;
+    color: $white;
+    padding-left: 5px;
+  }
 }
 
-//Check box for switching 
+//Check box for switching
 
 .controll__buttons_container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	& input {
-		display: none;
-	}
+  & input {
+    display: none;
+  }
 }
 
 .button {
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	border-radius: 50%;
-	transition: all 0.3s;
-	background-color: $white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 50px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px;
 }
 
 .right {
-	background: url("../../../assets/icons/right-arrow.svg") no-repeat center;
+  background: url("../../../assets/icons/right-arrow.svg") no-repeat center;
 }
 
 .left {
-	background: url("../../../assets/icons/left-arrow.svg") no-repeat center;
+  background: url("../../../assets/icons/left-arrow.svg") no-repeat center;
 }
 
 .disabled {
-	opacity: 0.5;
-	cursor: default;
+  opacity: 0.5;
+  cursor: default;
 }

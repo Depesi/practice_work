@@ -3,6 +3,7 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
+	// min-height: 100%;
 }
 .dark-wrapper {
 	display: flex;
@@ -23,6 +24,20 @@ li {
 	max-width: 1120px;
 	padding: 0 5px;
 	margin: 0 auto;
+
+	@media (max-width: $secondPCScreen) {
+		max-width: 930px;
+	}
+	@media (max-width: $firstTabletScreen) {
+		max-width: 730px;
+	}
+	@media (max-width: $secondTabletScreen) {
+		max-width: 560px;
+	}
+	@media (max-width: $firstMobileScreen) {
+		width: auto;
+		padding: 0 10px;
+	}
 }
 
 a {
@@ -89,35 +104,10 @@ a {
 
 //!scrollBar
 
-//Оболочка для ошибки
 .content__container {
-	position: relative;
-}
-.error__container {
-	position: fixed;
-	right: 10px;
-	bottom: 10px;
-	background-color: red;
-	animation: open-modal-error 1s ease;
-	padding: 10px;
-	border-radius: 10px;
-}
-.error__container_close {
-	display: flex;
-	justify-content: flex-end;
-	cursor: pointer;
-	margin-bottom: 5px;
-}
-.error__container_text {
-	color: $white;
-}
-
-@keyframes open-modal-error {
-	from {
-		transform: translate(0, 200%);
-	}
-	to {
-		transform: translate(0, 0);
+	margin-bottom: 25px;
+	
+	@media (max-width: $secondTabletScreen) {
+		margin-bottom: 15px;
 	}
 }
-//!Оболочка для ошибки

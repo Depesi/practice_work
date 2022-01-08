@@ -7,7 +7,6 @@ import leftArrow from '../../../assets/icons/left-arrow.svg';
 import rightArrow from '../../../assets/icons/right-arrow.svg';
 
 const BtnSlider = ({ direction, moveSlide }) => {
-  // eslint-disable-next-line prettier/prettier
   return (
     <button
       type="button"

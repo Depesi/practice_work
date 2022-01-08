@@ -2,7 +2,12 @@
 
 .contact__block {
 	margin: 0 20px;
-	@media (max-width: 1000px) {
+
+	@media (max-width: $secondPCScreen) {
+		margin: 0 8px;
+	}
+
+	@media (max-width: $firstTabletScreen) {
 		margin-bottom: 15px;
 	}
 }
@@ -11,12 +16,14 @@
 	font-weight: 500;
 	font-size: 24px;
 	color: $mainColor;
+	margin-bottom: 15px;
 }
 
 .contacts__row {
 	display: flex;
 	justify-content: space-between;
-	@media (max-width: 1000px) {
+
+	@media (max-width: $firstTabletScreen) {
 		flex-direction: column;
 	}
 }
@@ -32,31 +39,38 @@
 	background: $white;
 	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 	border-radius: 16px;
-	padding: 30px;
-}
+	padding: 14px;
 
-.contacts__callCenter_list {
-	position: relative;
+	@media (max-width: $secondMobileScreen) {
+		padding: 10px 5px;
+	}
 }
 
 .callCenter__list_item {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
-	padding-left: 15px;
+	font-weight: 500;
 
 	&::before {
 		content: "";
 		width: 10px;
 		height: 10px;
 		background-color: $mainColor;
-		position: absolute;
-		left: -10px;
 		border-radius: 50%;
+		margin-right: 10px;
 	}
 
 	&:last-child {
 		margin: 0;
+	}
+
+	@media (max-width: $secondTabletScreen) {
+		margin-bottom: 10px;
+	}
+
+	@media (max-width: $secondMobileScreen) {
+		font-size: 16px;
 	}
 }
 
@@ -64,6 +78,15 @@
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
+}
+
+.contacts__callCenter_list {
+	@media (max-width: $firstTabletScreen) {
+		display: flex;
+    	justify-content: center;
+   		flex-direction: column;
+    	align-items: center;
+	}
 }
 
 .call__items_row {
@@ -75,12 +98,33 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	@media (max-width: $secondTabletScreen) {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+
+	@media (max-width: $secondMobileScreen) {
+		font-size: 16px;
+	}
 }
 
+.call__items_item {
+	display: flex;
+	justify-content: space-around;
+	flex-basis: 50%;
+
+	& a {
+		font-weight: 500;
+	}
+	@media (max-width: $secondTabletScreen) {
+		margin-bottom: 15px;
+	}
+}
 .call__items_city {
 	color: $mainColor;
+	font-weight: 500;
 }
-
 .contacts__photo {
 	width: 100%;
 }

@@ -1,17 +1,33 @@
 @import '../../../../assets/styles/variables.scss';
 
 .tablePhotos__container {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+    grid-template-columns: repeat(4, 23%);
+    box-sizing: border-box;
+    grid-column-gap: 30px;
+    grid-row-gap: 25px;
 
-	@media (max-width: 1060px) {
-		width: 960px;
-		margin: 0 auto;
+	@media (max-width: $secondPCScreen) {
+		grid-column-gap: 25px;
 	}
 
-	@media (max-width: 960px) {
-		width: 768px;
-		margin: 0 auto;
+	@media (max-width: $firstTabletScreen) {
+		grid-column-gap: 20px;
+	}
+
+	@media (max-width: $secondTabletScreen) {
+		grid-template-columns: repeat(3, 31%);
+		grid-row-gap: 20px;
+	}
+
+	@media (max-width: $firstMobileScreen) {
+		grid-template-columns: repeat(2, 48%);
+		grid-row-gap: 25px;
+		grid-column-gap: 18px;
+	}
+	
+	@media (max-width: $secondMobileScreen) {
+		grid-row-gap: 10px;
 	}
 }
 
@@ -19,20 +35,13 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex-basis: 23%;
 	background-color: $white;
 	border-radius: 16px;
-	margin-bottom: 25px;
-	margin-right: 28px;
 	padding-bottom: 25px;
 	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
-  
-	&:nth-child(4n) {
-	  margin-right: 0;
-	}
-  
-	@media (max-width: 1060px) {
-	  flex-basis: 22%;
+
+	@media (max-width: $secondMobileScreen) {
+		font-size: 16px;
 	}
 }
 
@@ -44,6 +53,19 @@
 	margin-bottom: 10px;
 	filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
 	object-fit: cover;
+
+	@media (max-width: $secondTabletScreen) {
+		height: 170px;
+	}
+	
+	@media (max-width: $firstMobileScreen) {
+		height: 220px;
+		margin-bottom: 5px;
+	}
+	
+	@media (max-width: $secondMobileScreen) {
+		height: 180px;
+	}
 }
 
 .tablePhotos__item_description {

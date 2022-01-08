@@ -11,7 +11,16 @@
 		color: $mainColor;
 		text-transform: uppercase;
 	}
+
+	
 }
+
+.footer__content {
+	@media (max-width: $secondTabletScreen) {
+		text-align: center;
+	}
+}
+
 .small__font {
 	font-size: 14px;
 	font-weight: 500;

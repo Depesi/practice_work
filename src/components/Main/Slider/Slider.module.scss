@@ -8,11 +8,29 @@
 	overflow: hidden;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	margin-bottom: 35px;
-  }
-  @media screen and (max-width: 700px){
-	.container-slider {
-	  margin: 100px 10px 0;
-	}
+
+	@media (max-width: $firstTabletScreen){
+		  max-width: 600px;
+		  max-height: 400px;
+		}
+
+	@media (max-width: $secondTabletScreen){
+			max-width: 500px;
+			max-height: 350px;
+			margin-bottom: 25px;
+		}
+
+		@media (max-width: $firstMobileScreen){
+			max-width: 370px;
+			max-height: 200px;
+		}
+
+		@media (max-width: $secondMobileScreen){
+			max-width: 310px;
+			max-height: 180px;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
   }
   .slide {
 	width: 100%;
@@ -25,6 +43,26 @@
 		width: 700px;
 		height: 500px;
 		object-fit: cover;
+	
+		@media (max-width: $firstTabletScreen){
+			max-width: 600px;
+			max-height: 400px;
+		}
+		
+		@media (max-width: $secondTabletScreen){
+			max-width: 550px;
+			max-height: 350px;
+		}
+
+		@media (max-width: $firstMobileScreen){
+			max-width: 370px;
+			max-height: 200px;
+		}
+
+		@media (max-width: $secondMobileScreen){
+			max-width: 310px;
+			max-height: 180px;
+		}
 	}
   }
   .slide__title {
@@ -39,6 +77,15 @@
 	  padding-bottom: 15px;
 	  padding-right: 15px;
 	  text-align: right;
+
+	  @media (max-width: $firstMobileScreen){
+		font-size: 24px;
+	}
+	@media (max-width: $secondMobileScreen){
+		font-size: 20px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+	}
   }
 
   .active__anim {
@@ -58,12 +105,22 @@
 	align-items: center;
 	outline: none;
 	border: none;
+
+	@media (max-width: $firstMobileScreen){
+		width: 35px;
+		height: 35px;
+	}
   }
   
   .btn__slide img {
 	width: 25px;
 	height: 25px;
 	pointer-events: none;
+
+	@media (max-width: $firstMobileScreen){
+		width: 20px;
+		height: 20px;
+	}
   }
   .prev {
 	top: 50%;

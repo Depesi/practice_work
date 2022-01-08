@@ -3,13 +3,56 @@
 .gridPhotos__container {
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: repeat(2, 220px);
+	grid-auto-rows: 220px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
 
-	@media (max-width: 900px) {
-	  grid-template-rows: repeat(2, 150px);
+	@media (max-width: $firstTabletScreen) {
+		grid-auto-rows: 170px;
 	}
+	
+	@media (max-width: $secondTabletScreen) {
+		grid-auto-rows: 150px;
+	}
+	
+	@media (max-width: $firstMobileScreen) {
+		grid-template-columns: repeat(4, 25%);
+		height: 300px;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+	
+	@media (max-width: 500px) {
+		grid-template-columns: repeat(3, 33.3%);
+		height: 300px;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+
+	@media (max-width: $secondMobileScreen) {
+		grid-template-columns: repeat(3, 33.3%);
+		grid-auto-rows: 150px;
+		height: 300px;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+
+	&::-webkit-scrollbar {
+		opacity: 0;
+		width: 7px;
+		background-color: #f9f9fd;
+	}
+
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+		background-color: #f9f9fd;
+		border-radius: 10px;
+	  }
+	  
+	  &::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: linear-gradient(180deg, #3d5055, #0f1827);
+	  }
 }
 
 .gridPhotos__item {
@@ -28,6 +71,10 @@
 	padding: 20px;
 	font-size: 20px;
 	color: $white;
+
+	@media (max-width: $firstTabletScreen) {
+		display: none;
+	}
 }
 
 .gridPhotos__item_overlay {
@@ -45,6 +92,7 @@
 		text-align: center;
 	  }
 	}
+	
 }
 .noFounded__movies {
 	display: flex;
@@ -59,5 +107,14 @@
 		width: 50px;
 		height: 50px;
 		background: url('../../../../assets/icons/warning.svg') no-repeat center;
+	}
+
+	@media (max-width: $firstTabletScreen) {
+		font-size: 20px;
+	}
+	
+	@media (max-width: $secondTabletScreen) {
+		text-align: center;
+		font-size: 18px;
 	}
 }

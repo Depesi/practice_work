@@ -6,9 +6,11 @@ const Footer = props => {
   return (
     <footer className={style.footer}>
       <div className="container">
-        Designed by &copy;
-        <span className={style.footer__name}> Anton Khomitskiy</span> for{' '}
-        <span className={style.small__font}>1</span>St Demo in SoftServe
+        <div className={style.footer__content}>
+          Designed by &copy;
+          <span className={style.footer__name}> Anton Khomitskiy</span> for{' '}
+          <span className={style.small__font}>1</span>St Demo in SoftServe
+        </div>
       </div>
     </footer>
   );

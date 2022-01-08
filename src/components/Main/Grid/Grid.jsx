@@ -26,33 +26,31 @@ const Grid = props => {
   });
 
   const allGenres = new Set (props.gridPhotos.map(img => img.genre));
-//   const allGenres = new Set (props.gridPhotos
-// 	.filter(
-// 		img =>
-// 		  img.id >= currentPage && img.id < props.pageSize + currentPage,
-// 	  ).map(img => img.genre));
 
   return (
     <>
-      <div className={style.above__table}>
-        <form>
-          <input 
-		    className={style.search__input}
-            type="text"
-            placeholder="Поиск фильма"
-            onChange={e => setValue(e.target.value)}
-          />
-        </form> 
-		<div>
-			Фильтр: <select name="select__genre" required="required" className={style.select__input} onChange={e => setGenre(e.target.value)}>
-				<option value=''> Все фильмы</option>	
-				{[...allGenres].sort().map((img, index) => {
-					return (
-						<option key={index} value={img}>{img}</option>
-					);
-				})}
-			</select>
+	  <div className={style.above__table}> 
+		<div className={style.filters__container}>
+			<form>
+			<input 
+				className={style.search__input}
+				type="text"
+				placeholder="Поиск фильма"
+				onChange={e => setValue(e.target.value)}
+			/>
+			</form> 
+			<div>
+				<select name="select__genre" required="required" className={style.select__input} onChange={e => setGenre(e.target.value)}>
+					<option value=''> Все фильмы</option>	
+					{[...allGenres].sort().map((img, index) => {
+						return (
+							<option key={index} value={img}>{img}</option>
+						);
+					})}
+				</select>
+			</div>
 		</div>
+
 		<div className={style.checkbox}>
     		<input type="checkbox" id="checked" className={style.checkbox__input} 
 				onClick={!tableMode ? () => setTableMode(true) : () => setTableMode(false)}/>

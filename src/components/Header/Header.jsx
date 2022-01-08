@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
@@ -12,7 +13,9 @@ const Header = props => {
     <header className={theme.darkMode ? style.headerDark : style.header}>
       <div className="container">
         <div className={style.header__row}>
-          <div className={style.header__logo}>LOGO</div>
+          <div className={style.header__logo}>
+            <NavLink to="/main"> LOGO </NavLink>
+          </div>
           <nav>
             <ul className={style.header__navbar}>
               <li>
