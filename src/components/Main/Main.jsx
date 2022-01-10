@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Grid from './Grid/Grid';
 import style from './Main.module.scss';
 import Slider from './Slider/Slider';
+import constants from '../../constants/constants';
 
 const Main = ({ sliderPhotos, getSliderPhotos }) => {
   useEffect(() => {
@@ -16,9 +16,9 @@ const Main = ({ sliderPhotos, getSliderPhotos }) => {
   return (
     <div className={style.mainPage__container}>
       <div className="container">
-        <div className={style.slider__heading}> Выбор критиков</div>
+        <h2 className={style.slider__heading}>{constants.CRITICTS_CHOISE}</h2>
         <Slider sliderPhotos={sliderPhotos} pageSize={pageSize} />
-        <div className={style.grid__heading}> Список фильмов </div>
+        <h2 className={style.grid__heading}> {constants.LIST_OF_FILMS} </h2>
         <Grid gridPhotos={sliderPhotos} pageSize={pageSize} />
       </div>
     </div>

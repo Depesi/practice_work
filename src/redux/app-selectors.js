@@ -1,11 +1,4 @@
-export const getDarkMode = state => {
-  return state.app.darkMode;
-};
-
+/* eslint-disable import/prefer-default-export */
 export const getInitializeApp = state => {
   return state.app.initializeApp;
-};
-
-export const getAppError = state => {
-  return state.app.appError;
 };

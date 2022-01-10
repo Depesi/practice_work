@@ -1,23 +1,20 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/order */
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { getThemeMode, setError } from './redux/app-reducer';
+import { getSliderPhotos } from './redux/photos-reducer';
 import './App.scss';
 import Contacts from './components/Contacts/Contacts';
-import HeaderContainer from './components/Header/Container/HeaderContainer';
-import { getDarkMode, getInitializeApp } from './redux/app-selectors';
+import { getInitializeApp } from './redux/app-selectors';
 import MainContainer from './components/Main/Container/MainContainer';
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 const App = props => {
   useEffect(() => {
-    props.getThemeMode();
+    props.getSliderPhotos();
   }, []);
 
   if (!props.initializeApp) {
@@ -30,8 +27,8 @@ const App = props => {
 
   return (
     <>
-      <div className={props.darkMode.darkMode ? 'dark-wrapper' : 'wrapper'}>
-        <HeaderContainer darkMode={props.darkMode} />
+      <div className="wrapper">
+        <Header />
         <div className="content__container">
           <Switch>
             <Route path="/" exact>
@@ -51,25 +48,22 @@ const App = props => {
 };
 
 App.defaultProps = {
-  getThemeMode: () => {},
+  getSliderPhotos: () => {},
   initializeApp: false,
-  darkMode: false,
 };
 
 App.propTypes = {
-  getThemeMode: PropTypes.func,
+  getSliderPhotos: PropTypes.func,
   initializeApp: PropTypes.bool,
-  darkMode: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
-    darkMode: getDarkMode(state),
     initializeApp: getInitializeApp(state),
   };
 };
 
 export default compose(
-  connect(mapStateToProps, { getThemeMode, setError }),
+  connect(mapStateToProps, { getSliderPhotos }),
   withRouter,
 )(App);

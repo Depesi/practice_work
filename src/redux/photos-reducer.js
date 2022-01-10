@@ -1,4 +1,6 @@
+/* eslint-disable no-debugger */
 import { mainAPI } from '../api/api';
+import { initializedSuccess } from './app-reducer';
 
 const SET_SLIDER_PHOTO = 'SET_SLIDER_PHOTO';
 
@@ -41,6 +43,7 @@ export const setSliderPhotos = sliderPhotos => {
 export const getSliderPhotos = () => async dispatch => {
   const data = await mainAPI.getSliderPhotos();
   dispatch(setSliderPhotos(data));
+  dispatch(initializedSuccess());
 };
 // thunk
 

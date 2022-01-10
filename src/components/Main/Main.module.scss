@@ -7,6 +7,10 @@
   padding: 15px 20px;
   margin-bottom: 20px;
   background-color: $mainColor;
+
+  @media (max-width: $middleMobileScreen) {
+	font-size: 20px;
+}
 }
 .slider__heading {
 	font-weight: 500;
@@ -15,4 +19,8 @@
 	color: $mainColor;
 	margin-bottom: 15px;
 	text-shadow: rgba(0,0,0, 0.25) 1px 0 20px;
+
+	@media (max-width: $middleMobileScreen) {
+		font-size: 20px;
+	}
 }

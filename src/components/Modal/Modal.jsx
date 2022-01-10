@@ -1,10 +1,9 @@
-/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import style from './Modal.module.scss';
+import constants from '../../constants/constants';
 
 const Modal = ({ active, setActive, ...props }) => {
   return (
@@ -22,10 +21,12 @@ const Modal = ({ active, setActive, ...props }) => {
           className={style.modal__content_image}
         />
         <div className={style.modal__content_description}>
-          <span> Краткое содержание: </span> {props.description}
+          <span> {`${constants.SUMMARY} `}</span> {props.description}
         </div>
 
-        <div className={style.modal__content_rate}> Рейтинг: {props.rate} </div>
+        <div className={style.modal__content_rate}>
+          {`${constants.RATE} ${props.rate}`}
+        </div>
       </div>
     </div>
   );

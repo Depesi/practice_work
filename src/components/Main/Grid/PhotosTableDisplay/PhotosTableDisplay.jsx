@@ -4,16 +4,17 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from './PhotosTableDisplay.module.scss';
 import Modal from '../../../Modal/Modal';
+import constants from '../../../../constants/constants';
 
 const PhotosTableDisplay = props => {
   const [modalActive, setModalActive] = useState(false);
   const [currentFilm, setCurrentFilm] = useState([]);
 
   return (
-    <>
+    <section>
       {!props.filteredPhoto.length ? (
         <div className={style.noFounded__movies}>
-          За этим запросом на этой странице не найдемо фильмов
+          {constants.NOT_FOUNDED_MOVIES}
         </div>
       ) : (
         <div className={style.tablePhotos__container}>
@@ -34,7 +35,7 @@ const PhotosTableDisplay = props => {
                   setCurrentFilm(img);
                 }}
               >
-                Подробнее
+                {constants.MORE}
               </div>
             </div>
           ))}
@@ -48,7 +49,7 @@ const PhotosTableDisplay = props => {
           />
         </div>
       )}
-    </>
+    </section>
   );
 };
 

@@ -1,84 +1,35 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import style from './Header.module.scss';
+import constants from '../../constants/constants';
 
 const Header = props => {
-  const theme = props.darkMode;
-
+  const LOGO = 'LOGO';
   return (
-    <header className={theme.darkMode ? style.headerDark : style.header}>
+    <header className={style.header}>
       <div className="container">
         <div className={style.header__row}>
           <div className={style.header__logo}>
-            <NavLink to="/main"> LOGO </NavLink>
+            <NavLink to="/main">{LOGO}</NavLink>
           </div>
-          <nav>
+          <nav className={style.nav}>
             <ul className={style.header__navbar}>
               <li>
-                <NavLink to="/main"> Main</NavLink>
+                <NavLink to="/main">{constants.MAIN}</NavLink>
               </li>
               <li>
-                <NavLink to="/contacts"> Contacts</NavLink>
+                <NavLink to="/contacts">{constants.CONTACTS}</NavLink>
               </li>
-
-              <div
-                role="button"
-                tabIndex={0}
-                className={style.toggleContainer}
-                onClick={
-                  theme.darkMode
-                    ? () => props.setThemeMode(false)
-                    : () => props.setThemeMode(true)
-                }
-              >
-                <div className={style.toggleWrapper}>
-                  <input
-                    type="checkbox"
-                    className={style.dn}
-                    id="dn"
-                    checked={!!theme.darkMode}
-                  />
-                  <label htmlFor="dn" className={style.toggle}>
-                    <span className={style.toggle__handler}>
-                      <span
-                        className={`${style.crater} ${style.crater1}`}
-                      ></span>
-                      <span
-                        className={`${style.crater} ${style.crater2}`}
-                      ></span>
-                      <span
-                        className={`${style.crater} ${style.crater3}`}
-                      ></span>
-                    </span>
-                    <span className={`${style.star} ${style.star1}`}></span>
-                    <span className={`${style.star} ${style.star2}`}></span>
-                    <span className={`${style.star} ${style.star3}`}></span>
-                    <span className={`${style.star} ${style.star4}`}></span>
-                    <span className={`${style.star} ${style.star5}`}></span>
-                    <span className={`${style.star} ${style.star6}`}></span>
-                  </label>
-                </div>
-              </div>
             </ul>
           </nav>
         </div>
       </div>
     </header>
   );
-};
-
-Header.defaultProps = {
-  darkMode: false,
-  setThemeMode: () => {},
-};
-
-Header.propTypes = {
-  darkMode: PropTypes.bool,
-  setThemeMode: PropTypes.func,
 };
 
 export default Header;

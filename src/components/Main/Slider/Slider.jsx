@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import BtnSlider from './BtnSlider';
 import style from './Slider.module.scss';
 import Modal from '../../Modal/Modal';
+import constants from '../../../constants/constants';
 
 const Slider = ({ sliderPhotos, pageSize }) => {
   const [modalActive, setModalActive] = useState(false);
@@ -41,7 +42,7 @@ const Slider = ({ sliderPhotos, pageSize }) => {
   };
 
   return (
-    <>
+    <section>
       <div className={style.container__slider}>
         {sortPhotos.map((img, index) => {
           return (
@@ -55,7 +56,7 @@ const Slider = ({ sliderPhotos, pageSize }) => {
             >
               <div className={style.slide__title}>
                 {img.title}
-                <div>Рейтинг: {img.rate}</div>
+                <div>{`${constants.RATE} ${img.rate}`}</div>
               </div>
               <img
                 src={img.url}
@@ -79,7 +80,7 @@ const Slider = ({ sliderPhotos, pageSize }) => {
         rate={sortPhotos[currentImage - 1]?.rate}
         photo={sortPhotos[currentImage - 1]?.url}
       />
-    </>
+    </section>
   );
 };
 
