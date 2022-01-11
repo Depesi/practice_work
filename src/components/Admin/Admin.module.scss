@@ -1,0 +1,64 @@
+@import "../../assets/styles/variables.scss";
+
+.upper__table_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.bttn_add {
+	padding: 6px 10px;
+	border-radius: 15px;
+	background-color: $mainColor;
+	color: $backgroundColor;
+	cursor: pointer;
+
+	&:hover {
+		background: darken($mainColor, 15%);
+	}
+}
+
+.bttn__edit {
+	padding: 6px 10px;
+	border-radius: 15px;
+	background-color: rgb(50, 50, 194);
+	color: $backgroundColor;
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: block;
+	cursor: pointer;
+
+	&:hover{
+		background: darken(rgb(50, 50, 194), 15%);
+	}
+}
+
+.bttn__delete {
+	padding: 6px 10px;
+	border-radius: 15px;
+	background-color: rgb(194, 50, 50);
+	color: $backgroundColor;
+	font-size: 16px;
+	display: block;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	&:hover{
+		background: darken(rgb(194, 50, 50), 15%);
+	}
+}
+
+.admin__table {
+	& td {
+		padding: 10px 0;
+		border-bottom: 2px solid black;
+	}
+	& tr {
+		text-align: center;
+	}
+
+	margin-bottom: 35px;
+}

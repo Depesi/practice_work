@@ -1,7 +1,7 @@
 /* eslint-disable no-unneeded-ternary */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import PhotosGridDisplay from './PhotosGridDisplay/PhotosGridDisplay';
 import PhotosTableDisplay from './PhotosTableDisplay/PhotosTableDisplay';
@@ -16,7 +16,8 @@ const Grid = props => {
 
   const filteredPhoto = props.gridPhotos
     .filter(
-      img => img.id >= currentPage && img.id < props.pageSize + currentPage,
+      (img, index) =>
+        index + 1 >= currentPage && index + 1 < props.pageSize + currentPage, //
     )
     .filter(img => {
       return (
@@ -102,17 +103,17 @@ const Grid = props => {
             setCurrentPage(currentPage + props.pageSize);
           }}
           disabled={
-            currentPage + props.pageSize < props.gridPhotos.length
-              ? false
-              : true
+            props.gridPhotos.length - (currentPage + props.pageSize - 1) < 1
+              ? true
+              : false
           }
         />
         <label
           htmlFor="rightButton"
           className={`${style.button} + ' ' ${style.right} ' ' + ${
-            currentPage + props.pageSize < props.gridPhotos.length
-              ? ' '
-              : style.disabled
+            props.gridPhotos.length - (currentPage + props.pageSize - 1) < 1
+              ? style.disabled
+              : ' '
           }`}
         >
           {' '}

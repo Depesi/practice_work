@@ -15,12 +15,12 @@ export const getAllFilms = async (req, res) => {
 
 export const getFilmById = async (req, res) => {
   try {
-    const Film = await Film.findAll({
+    const Films = await Film.findAll({
       where: {
         id: req.params.id,
       },
     });
-    res.json(Film[0]);
+    res.json(Films[0]);
   } catch (error) {
     res.json({ message: error.message });
   }

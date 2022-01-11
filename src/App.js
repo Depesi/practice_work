@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
@@ -11,6 +11,9 @@ import { getInitializeApp } from './redux/app-selectors';
 import MainContainer from './components/Main/Container/MainContainer';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Admin from './components/Admin/Admin';
+import EditFilm from './components/Admin/Actions/EditFilm/EditFilm';
+import AddFilm from './components/Admin/Actions/AddFilm/AddFilm';
 
 const App = props => {
   useEffect(() => {
@@ -28,21 +31,42 @@ const App = props => {
   return (
     <>
       <div className="wrapper">
-        <Header />
-        <div className="content__container">
-          <Switch>
-            <Route path="/" exact>
-              <Redirect to="/main" />
-            </Route>
-            <Route path="/practice_work" exact>
-              <Redirect to="/main" />
-            </Route>
-            <Route path="/main" render={() => <MainContainer />} />
-            <Route path="/contacts" render={() => <Contacts />} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/main" />
+          </Route>
+          <Route path="/practice_work" exact>
+            <Redirect to="/main" />
+          </Route>
+          <Route
+            path="/main"
+            render={() => (
+              <>
+                <Header />
+                <div className="content__container">
+                  <MainContainer />
+                </div>
+                <Footer />
+              </>
+            )}
+          />
+          <Route
+            path="/contacts"
+            render={() => (
+              <>
+                <Header />
+                <div className="content__container">
+                  <Contacts />
+                </div>
+                <Footer />
+              </>
+            )}
+          />
+          <Route exact path="/admin" render={() => <Admin />} />
+          <Route path="/admin/add" render={() => <AddFilm />} />
+          <Route path="/edit/:id" render={() => <EditFilm />} />
+        </Switch>
       </div>
-      <Footer />
     </>
   );
 };

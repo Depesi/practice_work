@@ -21,7 +21,7 @@
 	}
 
 	@media (max-width: $firstMobileScreen) {
-		grid-template-columns: repeat(2, 48%);
+		grid-template-columns: repeat(2, 47%);
 		grid-row-gap: 25px;
 		grid-column-gap: 18px;
 	}

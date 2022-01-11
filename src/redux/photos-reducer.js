@@ -1,4 +1,4 @@
-/* eslint-disable no-debugger */
+/* eslint-disable sonarjs/no-small-switch */
 import { mainAPI } from '../api/api';
 import { initializedSuccess } from './app-reducer';
 
@@ -19,7 +19,6 @@ const initialState = {
 };
 
 const photosReducer = (state = initialState, action) => {
-  // eslint-disable-next-line sonarjs/no-small-switch
   switch (action.type) {
     case SET_SLIDER_PHOTO:
       return {
@@ -42,7 +41,7 @@ export const setSliderPhotos = sliderPhotos => {
 // thunk
 export const getSliderPhotos = () => async dispatch => {
   const data = await mainAPI.getSliderPhotos();
-  dispatch(setSliderPhotos(data));
+  await dispatch(setSliderPhotos(data));
   dispatch(initializedSuccess());
 };
 // thunk

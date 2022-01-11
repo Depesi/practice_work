@@ -1,0 +1,60 @@
+@import "../../../assets/styles/variables.scss";
+
+.addFilm__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 35px;
+}
+
+.item__container {
+  margin-bottom: 5px;
+}
+
+.add__textArea{
+	outline: none;
+	padding: 5px;
+	border-radius: 12px;
+	width: 100%;
+	resize: none;
+	text-align: center;
+}
+
+.addFilm__label {
+	font-weight: 600px;
+	font-size: 20px;
+}
+
+.addFilm__input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 32px;
+  border: 2px solid $black;
+  outline: none;
+}
+ 
+.submit__row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.submit__input {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 6px 10px;
+	border-radius: 15px;
+	background-color: rgb(200, 200, 0);
+	font-weight: 500;
+	font-size: 16px;
+
+	&:hover{
+		background-color: darken(rgb(200, 200, 0), 15%);
+	}
+}
+
+.under__input {
+	font-size: 12px;
+	color: $darkBackgroundColor;
+}
