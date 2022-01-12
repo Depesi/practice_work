@@ -8,7 +8,7 @@ const constants = {
   CALL_CENTER: 'Call center',
   PHONENUMBERS_OF_CITIES: 'Номера регионов',
   MAIN: 'Главная',
-  NOT_FOUNDED_MOVIES: 'За этим запросом на этой странице не найдемо фильмов',
+  NOT_FOUNDED_MOVIES: 'За этим запросом не найдемо фильмов',
   MORE: 'Подробнее',
   ALL_FILMS: 'Все фильмы',
   RATE: 'Рейтинг: ',

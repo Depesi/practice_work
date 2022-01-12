@@ -1,7 +1,7 @@
 /* eslint-disable no-unneeded-ternary */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import PhotosGridDisplay from './PhotosGridDisplay/PhotosGridDisplay';
 import PhotosTableDisplay from './PhotosTableDisplay/PhotosTableDisplay';
@@ -14,17 +14,12 @@ const Grid = props => {
   const [genre, setGenre] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredPhoto = props.gridPhotos
-    .filter(
-      (img, index) =>
-        index + 1 >= currentPage && index + 1 < props.pageSize + currentPage, //
-    )
-    .filter(img => {
-      return (
-        img?.title?.toLowerCase().includes(value.toLowerCase()) &&
-        img?.genre?.toLowerCase().includes(genre.toLowerCase())
-      );
-    });
+  const filteredPhoto = props.gridPhotos.filter(img => {
+    return (
+      img?.title?.toLowerCase().includes(value.toLowerCase()) &&
+      img?.genre?.toLowerCase().includes(genre.toLowerCase())
+    );
+  });
 
   const allGenres = new Set(props.gridPhotos.map(img => img.genre));
 
@@ -75,9 +70,17 @@ const Grid = props => {
       </div>
 
       {!tableMode ? (
-        <PhotosGridDisplay filteredPhoto={filteredPhoto}></PhotosGridDisplay>
+        <PhotosGridDisplay
+          filteredPhoto={filteredPhoto}
+          pageSize={props.pageSize}
+          currentPage={currentPage}
+        ></PhotosGridDisplay>
       ) : (
-        <PhotosTableDisplay filteredPhoto={filteredPhoto}></PhotosTableDisplay>
+        <PhotosTableDisplay
+          filteredPhoto={filteredPhoto}
+          pageSize={props.pageSize}
+          currentPage={currentPage}
+        ></PhotosTableDisplay>
       )}
 
       <div className={style.controll__buttons_container}>
@@ -103,7 +106,8 @@ const Grid = props => {
             setCurrentPage(currentPage + props.pageSize);
           }}
           disabled={
-            props.gridPhotos.length - (currentPage + props.pageSize - 1) < 1
+            props.gridPhotos.length - (currentPage + props.pageSize - 1) < 1 ||
+            filteredPhoto.length < props.pageSize
               ? true
               : false
           }
@@ -111,7 +115,8 @@ const Grid = props => {
         <label
           htmlFor="rightButton"
           className={`${style.button} + ' ' ${style.right} ' ' + ${
-            props.gridPhotos.length - (currentPage + props.pageSize - 1) < 1
+            props.gridPhotos.length - (currentPage + props.pageSize - 1) < 1 ||
+            filteredPhoto.length < props.pageSize
               ? style.disabled
               : ' '
           }`}

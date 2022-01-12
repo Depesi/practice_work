@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
@@ -6,19 +7,28 @@ import style from './PhotosTableDisplay.module.scss';
 import Modal from '../../../Modal/Modal';
 import constants from '../../../../constants/constants';
 
-const PhotosTableDisplay = props => {
+const PhotosTableDisplay = ({
+  filteredPhoto,
+  pageSize,
+  currentPage,
+  ...props
+}) => {
   const [modalActive, setModalActive] = useState(false);
   const [currentFilm, setCurrentFilm] = useState([]);
 
+  const TablePhotos = filteredPhoto.slice(
+    currentPage - 1,
+    pageSize + currentPage - 1,
+  );
   return (
     <section>
-      {!props.filteredPhoto.length ? (
+      {!TablePhotos.length ? (
         <div className={style.noFounded__movies}>
           {constants.NOT_FOUNDED_MOVIES}
         </div>
       ) : (
         <div className={style.tablePhotos__container}>
-          {props.filteredPhoto.map(img => (
+          {TablePhotos.map(img => (
             <div className={style.tablePhotos__item} key={img.id}>
               <img
                 className={style.tablePhotos__item_photo}
@@ -53,8 +63,15 @@ const PhotosTableDisplay = props => {
   );
 };
 
-PhotosTableDisplay.propTypes = {
-  filteredPhoto: PropTypes.array.isRequired,
+PhotosTableDisplay.defaultProps = {
+  filteredPhoto: [],
+  pageSize: 10,
+  currentPage: 1,
 };
 
+PhotosTableDisplay.propTypes = {
+  filteredPhoto: PropTypes.array,
+  pageSize: PropTypes.number,
+  currentPage: PropTypes.number,
+};
 export default PhotosTableDisplay;

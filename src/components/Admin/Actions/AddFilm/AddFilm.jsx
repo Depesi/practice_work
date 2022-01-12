@@ -1,6 +1,3 @@
-/* eslint-disable no-debugger */
-/* eslint-disable object-shorthand */
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/label-has-for */
 import React, { useState } from 'react';
@@ -28,7 +25,6 @@ const AddFilm = () => {
       thumbnailUrl,
     });
     history.push('/admin');
-    debugger;
   };
 
   const createLabel = (name, data, setData, placeholder, maxLength = 255) => {

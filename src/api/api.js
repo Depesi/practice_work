@@ -1,7 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable sonarjs/prefer-immediate-return */
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-debugger */
 import * as axios from 'axios';
 
 const instance = axios.create({
@@ -22,20 +18,20 @@ export const mainAPI = {
 };
 
 export const adminApi = {
-	deleteFilm(id) {
-		return instance.delete(`films/${id}`).then(response => response.data)
-	},
-	getFilmById(id) {
-		return instance.get(`films/${id}`).then(response => response.data)
-	},
-	updateFilm(id,title, rate, description,genre,url,thumbnailUrl) {
-		return instance.patch(`films/${id}`, {
-		  title,
-		  rate,
-		  description,
-		  genre,
-		  url,
-		  thumbnailUrl,
-		});
-	},
-}
+  deleteFilm(id) {
+    return instance.delete(`films/${id}`).then(response => response.data);
+  },
+  getFilmById(id) {
+    return instance.get(`films/${id}`).then(response => response.data);
+  },
+  updateFilm(id, title, rate, description, genre, url, thumbnailUrl) {
+    return instance.patch(`films/${id}`, {
+      title,
+      rate,
+      description,
+      genre,
+      url,
+      thumbnailUrl,
+    });
+  },
+};
