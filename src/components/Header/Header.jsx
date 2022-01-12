@@ -24,6 +24,9 @@ const Header = props => {
               <li>
                 <NavLink to="/contacts">{constants.CONTACTS}</NavLink>
               </li>
+              <li>
+                <NavLink to="/admin">{constants.ENTER}</NavLink>
+              </li>
             </ul>
           </nav>
         </div>

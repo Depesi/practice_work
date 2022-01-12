@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 const constants = {
   DESYGN_BY: 'Дизайн сделан',
   DEMO_IN_SOFTSERVE: 'демо в SoftServe',
@@ -15,6 +14,7 @@ const constants = {
   CRITICTS_CHOISE: 'Выбор критиков ',
   LIST_OF_FILMS: 'Список фильмов ',
   SUMMARY: 'Краткое содержание:',
+  ENTER: 'Вход',
 };
 
 export default constants;

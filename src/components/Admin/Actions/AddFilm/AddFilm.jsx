@@ -60,7 +60,7 @@ const AddFilm = () => {
             placeholder="Добавить описание"
             value={description}
             onChange={e => setDescription(e.target.value)}
-            maxLength={255}
+            maxLength={350}
             required
           />
           <span className={style.under__input}>

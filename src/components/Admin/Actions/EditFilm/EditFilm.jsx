@@ -77,9 +77,10 @@ const EditFilm = () => {
             placeholder="Изменить Описание"
             value={description}
             onChange={e => setDescription(e.target.value)}
+            maxLength={350}
           />
           <span className={style.under__input}>
-            Допустимая длина поля: {description?.length} / 255
+            Допустимая длина поля: {description?.length} / 350
           </span>
         </div>
         {createLabel('Жанр', genre, setGenre, 60)}
