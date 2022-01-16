@@ -64,7 +64,7 @@ const AddFilm = () => {
             required
           />
           <span className={style.under__input}>
-            Допустимая длина поля: {description?.length} / 255
+            Допустимая длина поля: {description?.length} / 350
           </span>
         </div>
         {createLabel('Жанр', genre, setGenre, 'Добавить жанр', 60)}

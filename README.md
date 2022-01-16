@@ -2,9 +2,31 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## `npm i`
 
-In the project directory, you can run:
+Run in folder "backend" and then in global folder with frontend
+
+## CREATE DATABASE 'films_db' for user 'test':
+
+CREATE DATABASE films_db;
+ALTER USER test PASSWORD 'test2281337';
+
+CREATE TABLE films(
+id INT(11) PRIMARY KEY AUTO_INCREMENT,
+title VARCHAR(100),
+rate DOUBLE,
+description VARCHAR(350),
+genre VARCHAR(60),
+url VARCHAR(255),
+thumbnailUrl VARCHAR(255),
+createdAt DATE,
+updatedAt DATE
+)ENGINE=INNODB;
+
+### `nodemon`
+
+Runs the backend in the folder "backend".
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ### `npm start`
 
@@ -38,6 +60,10 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `npm run lint:fix`
+
+If you have many warnings with eslint you can run this command to fix all possible errors automatically.
 
 ## Learn More
 

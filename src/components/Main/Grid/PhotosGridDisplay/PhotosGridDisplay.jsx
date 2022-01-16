@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
@@ -7,12 +6,7 @@ import style from './PhotosGridDisplay.module.scss';
 import Modal from '../../../Modal/Modal';
 import constants from '../../../../constants/constants';
 
-const PhotosGridDisplay = ({
-  filteredPhoto,
-  pageSize,
-  currentPage,
-  ...props
-}) => {
+const PhotosGridDisplay = ({ filteredPhoto, pageSize, currentPage }) => {
   const [modalActive, setModalActive] = useState(false);
   const [currentFilm, setCurrentFilm] = useState([]);
 

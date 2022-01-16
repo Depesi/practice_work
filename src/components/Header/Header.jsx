@@ -1,7 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unused-prop-types */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Header.module.scss';
